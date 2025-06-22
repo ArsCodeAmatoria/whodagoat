@@ -14,7 +14,7 @@ export default function PitchPage() {
           BUSINESS PLAN & INVESTMENT PROPOSAL
         </div>
         <div className="screenplay-subtitle">
-          Production Company: [Company Name]
+          Production Company: Ars Code Amatoria
         </div>
         <div className="screenplay-subtitle">
           Date: {new Date().getFullYear()}

@@ -14,7 +14,7 @@ export default function Home() {
           A Reality Competition Series Treatment
         </div>
         <div className="screenplay-subtitle">
-          Created by [Production Company Name]
+          Created by Ars Code Amatoria
         </div>
         
         <div className="page-break"></div>
