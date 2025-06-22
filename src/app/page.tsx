@@ -1,5 +1,6 @@
 import React from "react";
 import NavigationBox from "../components/navigation-box";
+import RevenueChart from "../components/revenue-chart";
 
 export default function Home() {
   return (
@@ -144,42 +145,18 @@ export default function Home() {
           <div className="business-subheading">
             REVENUE PROJECTIONS (SEASON 1)
           </div>
-          <table className="business-table">
-            <thead>
-              <tr>
-                <th>REVENUE STREAM</th>
-                <th>AMOUNT</th>
-                <th>PERCENTAGE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Streaming Rights</td>
-                <td>$8,000,000</td>
-                <td>58%</td>
-              </tr>
-              <tr>
-                <td>Advertising Revenue</td>
-                <td>$3,500,000</td>
-                <td>25%</td>
-              </tr>
-              <tr>
-                <td>Sponsorship Deals</td>
-                <td>$1,800,000</td>
-                <td>13%</td>
-              </tr>
-              <tr>
-                <td>Merchandise/Licensing</td>
-                <td>$500,000</td>
-                <td>4%</td>
-              </tr>
-              <tr>
-                <td><strong>TOTAL REVENUE</strong></td>
-                <td><strong>$13,800,000</strong></td>
-                <td><strong>100%</strong></td>
-              </tr>
-            </tbody>
-          </table>
+          <div style={{ margin: '2em 0', padding: '1em', background: '#fafafa' }}>
+            <RevenueChart />
+            <div style={{ 
+              textAlign: 'center', 
+              marginTop: '1em',
+              fontFamily: 'Courier New, monospace',
+              fontSize: '12pt',
+              fontWeight: 'bold'
+            }}>
+              TOTAL REVENUE: $13,800,000
+            </div>
+          </div>
 
           <div className="business-subheading">
             PRODUCTION BUDGET

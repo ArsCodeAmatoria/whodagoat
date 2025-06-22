@@ -1,5 +1,7 @@
 import React from "react";
 import NavigationBox from "../../components/navigation-box";
+import FinancialChart from "../../components/financial-chart";
+import RevenueChart from "../../components/revenue-chart";
 
 export default function PitchPage() {
   return (
@@ -163,48 +165,22 @@ export default function PitchPage() {
         <div className="business-subheading">
           SEASON 1 REVENUE BREAKDOWN
         </div>
-        <table className="business-table">
-          <thead>
-            <tr>
-              <th>REVENUE STREAM</th>
-              <th>AMOUNT</th>
-              <th>PERCENTAGE</th>
-              <th>NOTES</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Streaming Rights</td>
-              <td>$8,000,000</td>
-              <td>58%</td>
-              <td>Netflix/Amazon tier pricing</td>
-            </tr>
-            <tr>
-              <td>Advertising Revenue</td>
-              <td>$3,500,000</td>
-              <td>25%</td>
-              <td>Premium tech brand sponsors</td>
-            </tr>
-            <tr>
-              <td>Sponsorship Deals</td>
-              <td>$1,800,000</td>
-              <td>13%</td>
-              <td>Apple, Google, Microsoft</td>
-            </tr>
-            <tr>
-              <td>Merchandise/Licensing</td>
-              <td>$500,000</td>
-              <td>4%</td>
-              <td>Branded tech accessories</td>
-            </tr>
-            <tr>
-              <td><strong>TOTAL REVENUE</strong></td>
-              <td><strong>$13,800,000</strong></td>
-              <td><strong>100%</strong></td>
-              <td><strong>Conservative estimate</strong></td>
-            </tr>
-          </tbody>
-        </table>
+        <div style={{ margin: '2em 0', padding: '1em', background: '#fafafa' }}>
+          <RevenueChart />
+          <div style={{ 
+            marginTop: '1em',
+            fontFamily: 'Courier New, monospace',
+            fontSize: '11pt',
+            lineHeight: '1.6'
+          }}>
+            <strong>Revenue Notes:</strong><br/>
+            • Streaming Rights: Netflix/Amazon tier pricing<br/>
+            • Advertising: Premium tech brand sponsors<br/>
+            • Sponsorships: Apple, Google, Microsoft<br/>
+            • Merchandise: Branded tech accessories<br/>
+            <strong>TOTAL REVENUE: $13,800,000</strong>
+          </div>
+        </div>
 
         <div className="business-subheading">
           PRODUCTION COST BREAKDOWN
@@ -513,40 +489,9 @@ export default function PitchPage() {
         <div className="business-subheading">
           INVESTOR RETURNS
         </div>
-        <table className="business-table">
-          <thead>
-            <tr>
-              <th>SCENARIO</th>
-              <th>PROBABILITY</th>
-              <th>REVENUE (3-YEAR)</th>
-              <th>INVESTOR RETURN</th>
-              <th>ROI</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Conservative</td>
-              <td>60%</td>
-              <td>$45,000,000</td>
-              <td>$18,000,000</td>
-              <td>80%</td>
-            </tr>
-            <tr>
-              <td>Expected</td>
-              <td>30%</td>
-              <td>$54,500,000</td>
-              <td>$25,000,000</td>
-              <td>150%</td>
-            </tr>
-            <tr>
-              <td>Optimistic</td>
-              <td>10%</td>
-              <td>$75,000,000</td>
-              <td>$40,000,000</td>
-              <td>300%</td>
-            </tr>
-          </tbody>
-        </table>
+        <div style={{ margin: '2em 0', padding: '1em', background: '#fafafa' }}>
+          <FinancialChart />
+        </div>
 
         {/* Exit Strategy */}
         <div className="business-heading">
