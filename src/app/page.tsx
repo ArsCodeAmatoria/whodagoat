@@ -1,103 +1,195 @@
-import Image from "next/image";
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Play, Users, Trophy, Code, Tv, DollarSign } from "lucide-react";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-display-xl font-bold mb-6 text-balance">
+              Who's the <span className="italic">GOAT</span>?
+            </h1>
+            <p className="text-display-sm font-light mb-8 text-muted-foreground text-balance">
+              The Ultimate Reality-Tech Show
+            </p>
+            <p className="text-xl leading-relaxed mb-12 text-muted-foreground max-w-3xl mx-auto">
+              Twelve young creators enter the arena with one goal: prove they are the Greatest of All Tech. 
+              Each week, contestants must build, brand, and pitch an original app under intense deadlines 
+              and team pressure. Only one will rise to GOAT status.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8 py-6">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Pitch Video
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                Read Full Concept
+              </Button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Concept Overview */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-display-md font-bold mb-6">Reality TV Meets Silicon Valley</h2>
+            <p className="text-lg text-muted-foreground">
+              The first reality competition where innovation meets entertainment. 
+              Contestants build real apps, learn actual skills, and compete for life-changing opportunities.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="border-2">
+              <CardHeader>
+                <Users className="w-8 h-8 mb-2" />
+                <CardTitle>12 Contestants</CardTitle>
+                <CardDescription>Young developers, designers, and entrepreneurs</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Diverse backgrounds from self-taught coders to bootcamp graduates, 
+                  all hungry to prove they're the GOAT.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardHeader>
+                <Code className="w-8 h-8 mb-2" />
+                <CardTitle>Real Apps Built</CardTitle>
+                <CardDescription>Functional, deployable applications</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Unlike other reality shows, contestants create actual products 
+                  that launch post-episode for real user feedback.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2">
+              <CardHeader>
+                <Tv className="w-8 h-8 mb-2" />
+                <CardTitle>44-Min Episodes</CardTitle>
+                <CardDescription>12 episodes of pure innovation</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Weekly episodes featuring The Drop, The Build, The Pitch, 
+                  and The Cut. Drama meets technical excellence.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Format Structure */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-display-md font-bold mb-12 text-center">Episode Breakdown</h2>
+            
+            <div className="space-y-8">
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-2xl font-bold mb-2">The Drop</h3>
+                <p className="text-muted-foreground mb-4">New theme revealed (e.g. HealthTech, AI Tools, Gen Z Social)</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-2xl font-bold mb-2">The Build</h3>
+                <p className="text-muted-foreground mb-4">Teams race to design, develop, and brand their app</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-2xl font-bold mb-2">The Pitch</h3>
+                <p className="text-muted-foreground mb-4">Present to judges and audience in professional environment</p>
+              </div>
+              
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-2xl font-bold mb-2">The Cut</h3>
+                <p className="text-muted-foreground mb-4">Losing team must vote one member off</p>
+              </div>
+              
+              <div className="border-l-4 border-yellow-500 pl-6">
+                <h3 className="text-2xl font-bold mb-2">The GOAT Rises</h3>
+                <p className="text-muted-foreground mb-4">Last one standing is crowned the Greatest of All Tech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Grand Prize */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <Trophy className="w-16 h-16 mx-auto mb-8 text-yellow-500" />
+            <h2 className="text-display-md font-bold mb-8">Grand Prize</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <Card>
+                <CardHeader>
+                  <DollarSign className="w-8 h-8 mb-2" />
+                  <CardTitle>$100K Funding</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Startup capital to launch your winning app and build your company.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <Users className="w-8 h-8 mb-2" />
+                  <CardTitle>Elite Mentorship</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    1-on-1 guidance from top founders and VCs in the industry.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-4">The Crown: The Title of THE GOAT</h3>
+              <p className="text-lg text-muted-foreground">
+                Recognition as the Greatest of All Tech, opening doors across Silicon Valley and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-display-md font-bold mb-6">Ready to Change Reality TV Forever?</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Join the revolution where tech meets entertainment. 
+              The next generation of developers deserves a show that matches their ambition.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8 py-6">
+                View Pitch Deck
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+                Contact Team
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
