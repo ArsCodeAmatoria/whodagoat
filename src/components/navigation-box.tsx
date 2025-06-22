@@ -43,7 +43,7 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
           marginTop: '8px',
           fontFamily: 'Courier New, monospace' 
         }}>
-          NINE
+          NINE IX
         </p>
       </div>
 
