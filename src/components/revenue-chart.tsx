@@ -1,105 +1,157 @@
 "use client"
 
-import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts'
+import { Line } from 'react-chartjs-2'
+import { useState, useEffect } from 'react'
 import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-} from "@/components/ui/chart"
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js'
 
-interface RevenueDataItem {
-  name: string;
-  value: number;
-  percentage: number;
-  color: string;
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
+
+const revenueData = {
+  labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+  datasets: [
+    {
+      label: 'Streaming Revenue',
+      data: [2000000, 2200000, 2500000, 2800000],
+      borderColor: '#374151',
+      backgroundColor: 'rgba(55, 65, 81, 0.1)',
+      tension: 0.1,
+    },
+    {
+      label: 'Advertising Revenue',
+      data: [800000, 950000, 1100000, 1300000],
+      borderColor: '#6b7280',
+      backgroundColor: 'rgba(107, 114, 128, 0.1)',
+      tension: 0.1,
+    },
+    {
+      label: 'Sponsorship Revenue',
+      data: [400000, 500000, 650000, 800000],
+      borderColor: '#9ca3af',
+      backgroundColor: 'rgba(156, 163, 175, 0.1)',
+      tension: 0.1,
+    },
+    {
+      label: 'Merchandise Revenue',
+      data: [100000, 150000, 200000, 250000],
+      borderColor: '#d1d5db',
+      backgroundColor: 'rgba(209, 213, 219, 0.1)',
+      tension: 0.1,
+    },
+  ],
 }
 
-const revenueData: RevenueDataItem[] = [
-  { name: "Streaming Rights", value: 8000000, percentage: 58, color: "#374151" },
-  { name: "Advertising Revenue", value: 3500000, percentage: 25, color: "#6b7280" },
-  { name: "Sponsorship Deals", value: 1800000, percentage: 13, color: "#9ca3af" },
-  { name: "Merchandise/Licensing", value: 500000, percentage: 4, color: "#d1d5db" },
-]
-
-const chartConfig = {
-  streaming: {
-    label: "Streaming Rights",
-    color: "#374151",
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'bottom' as const,
+      labels: {
+        font: {
+          family: 'Courier New, monospace',
+          size: 11,
+        },
+        color: '#374151',
+      },
+    },
+    title: {
+      display: false,
+    },
+    tooltip: {
+      titleFont: {
+        family: 'Courier New, monospace',
+        size: 12,
+      },
+      bodyFont: {
+        family: 'Courier New, monospace',
+        size: 11,
+      },
+      callbacks: {
+        label: function(context: any) {
+          return `${context.dataset.label}: $${context.parsed.y.toLocaleString()}`
+        }
+      }
+    },
   },
-  advertising: {
-    label: "Advertising Revenue", 
-    color: "#6b7280",
+  scales: {
+    y: {
+      beginAtZero: true,
+      ticks: {
+        font: {
+          family: 'Courier New, monospace',
+          size: 11,
+        },
+        color: '#374151',
+        callback: function(value: any) {
+          return '$' + (value / 1000000).toFixed(1) + 'M'
+        }
+      },
+      grid: {
+        color: '#e5e7eb',
+      },
+    },
+    x: {
+      ticks: {
+        font: {
+          family: 'Courier New, monospace',
+          size: 11,
+        },
+        color: '#374151',
+      },
+      grid: {
+        color: '#e5e7eb',
+      },
+    },
   },
-  sponsorship: {
-    label: "Sponsorship Deals",
-    color: "#9ca3af",
-  },
-  merchandise: {
-    label: "Merchandise/Licensing",
-    color: "#d1d5db",
-  },
-} satisfies ChartConfig
-
-const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: RevenueDataItem }> }) => {
-  if (active && payload && payload.length) {
-    const data = payload[0].payload;
-    return (
-      <div style={{
-        backgroundColor: 'white',
-        border: '1px solid #e5e7eb',
-        borderRadius: '6px',
-        padding: '12px',
-        fontFamily: 'Courier New, monospace',
-        fontSize: '11px'
-      }}>
-        <p style={{ margin: 0, fontWeight: 'bold' }}>{data.name}</p>
-        <p style={{ margin: '4px 0 0 0' }}>
-          ${data.value.toLocaleString()} ({data.percentage}%)
-        </p>
-      </div>
-    );
-  }
-  return null;
-};
+}
 
 export default function RevenueChart() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <div style={{ 
+        width: '100%', 
+        height: '400px',
+        fontFamily: 'Courier New, monospace',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#666'
+      }}>
+        Loading chart...
+      </div>
+    )
+  }
+
   return (
     <div style={{ 
       width: '100%', 
       height: '400px',
-      fontFamily: 'Courier New, monospace'
+      fontFamily: 'Courier New, monospace',
     }}>
-      <ChartContainer config={chartConfig}>
-        <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
-            <Pie
-              data={revenueData}
-              cx="50%"
-              cy="50%"
-              outerRadius={120}
-              fill="#8884d8"
-              dataKey="value"
-              stroke="none"
-            >
-              {revenueData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={entry.color} />
-              ))}
-            </Pie>
-            <ChartTooltip content={<CustomTooltip />} />
-            <Legend 
-              wrapperStyle={{
-                fontFamily: 'Courier New, monospace',
-                fontSize: '11px'
-              }}
-              formatter={(value) => (
-                <span style={{ color: '#374151' }}>
-                  {value}: ${revenueData.find(d => d.name === value)?.value.toLocaleString()} ({revenueData.find(d => d.name === value)?.percentage}%)
-                </span>
-              )}
-            />
-          </PieChart>
-        </ResponsiveContainer>
-      </ChartContainer>
+      <Line data={revenueData} options={options} />
     </div>
   )
 } 

@@ -1,110 +1,152 @@
 "use client"
 
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts'
+import { Line } from 'react-chartjs-2'
+import { useState, useEffect } from 'react'
 import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-} from "@/components/ui/chart"
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js'
 
-interface FinancialDataItem {
-  scenario: string;
-  revenue: number;
-  investorReturn: number;
-  roi: number;
-  probability: number;
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
+
+const financialData = {
+  labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5'],
+  datasets: [
+    {
+      label: 'Conservative Scenario',
+      data: [15000000, 18000000, 22000000, 26000000, 30000000],
+      borderColor: '#9ca3af',
+      backgroundColor: 'rgba(156, 163, 175, 0.1)',
+      tension: 0.1,
+      borderDash: [5, 5],
+    },
+    {
+      label: 'Expected Scenario',
+      data: [18000000, 25000000, 32000000, 40000000, 48000000],
+      borderColor: '#374151',
+      backgroundColor: 'rgba(55, 65, 81, 0.1)',
+      tension: 0.1,
+    },
+    {
+      label: 'Optimistic Scenario',
+      data: [25000000, 35000000, 50000000, 70000000, 95000000],
+      borderColor: '#6b7280',
+      backgroundColor: 'rgba(107, 114, 128, 0.1)',
+      tension: 0.1,
+      borderDash: [10, 5],
+    },
+  ],
 }
 
-const financialData: FinancialDataItem[] = [
-  {
-    scenario: "Conservative",
-    revenue: 45000000,
-    investorReturn: 18000000,
-    roi: 80,
-    probability: 60
+const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'bottom' as const,
+      labels: {
+        font: {
+          family: 'Courier New, monospace',
+          size: 11,
+        },
+        color: '#374151',
+      },
+    },
+    title: {
+      display: false,
+    },
+    tooltip: {
+      titleFont: {
+        family: 'Courier New, monospace',
+        size: 12,
+      },
+      bodyFont: {
+        family: 'Courier New, monospace',
+        size: 11,
+      },
+      callbacks: {
+        label: function(context: any) {
+          return `${context.dataset.label}: $${(context.parsed.y / 1000000).toFixed(1)}M`
+        }
+      }
+    },
   },
-  {
-    scenario: "Expected", 
-    revenue: 54500000,
-    investorReturn: 25000000,
-    roi: 150,
-    probability: 30
+  scales: {
+    y: {
+      beginAtZero: true,
+      ticks: {
+        font: {
+          family: 'Courier New, monospace',
+          size: 11,
+        },
+        color: '#374151',
+        callback: function(value: any) {
+          return '$' + (value / 1000000).toFixed(0) + 'M'
+        }
+      },
+      grid: {
+        color: '#e5e7eb',
+      },
+    },
+    x: {
+      ticks: {
+        font: {
+          family: 'Courier New, monospace',
+          size: 11,
+        },
+        color: '#374151',
+      },
+      grid: {
+        color: '#e5e7eb',
+      },
+    },
   },
-  {
-    scenario: "Optimistic",
-    revenue: 75000000,
-    investorReturn: 40000000,
-    roi: 300,
-    probability: 10
-  }
-]
-
-const chartConfig = {
-  revenue: {
-    label: "Revenue (3-Year)",
-    color: "#6b7280",
-  },
-  investorReturn: {
-    label: "Investor Return",
-    color: "#374151",
-  },
-} satisfies ChartConfig
-
-const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: Array<{ payload: FinancialDataItem }>; label?: string }) => {
-  if (active && payload && payload.length) {
-    const data = payload[0].payload;
-    return (
-      <div style={{
-        backgroundColor: 'white',
-        border: '1px solid #e5e7eb',
-        borderRadius: '6px',
-        padding: '12px',
-        fontFamily: 'Courier New, monospace',
-        fontSize: '11px'
-      }}>
-        <p style={{ margin: 0, fontWeight: 'bold' }}>{label} Scenario</p>
-        <p style={{ margin: '4px 0 0 0' }}>
-          Revenue: ${data.revenue.toLocaleString()}
-        </p>
-        <p style={{ margin: '2px 0 0 0' }}>
-          Return: ${data.investorReturn.toLocaleString()}
-        </p>
-        <p style={{ margin: '2px 0 0 0' }}>
-          ROI: {data.roi}%
-        </p>
-        <p style={{ margin: '2px 0 0 0' }}>
-          Probability: {data.probability}%
-        </p>
-      </div>
-    );
-  }
-  return null;
-};
+}
 
 export default function FinancialChart() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return (
+      <div style={{ 
+        width: '100%', 
+        height: '350px',
+        fontFamily: 'Courier New, monospace',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#666'
+      }}>
+        Loading chart...
+      </div>
+    )
+  }
+
   return (
     <div style={{ 
       width: '100%', 
       height: '350px',
-      fontFamily: 'Courier New, monospace'
+      fontFamily: 'Courier New, monospace',
     }}>
-      <ChartContainer config={chartConfig}>
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={financialData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-            <XAxis 
-              dataKey="scenario" 
-              tick={{ fontFamily: 'Courier New, monospace', fontSize: 11, fill: '#374151' }}
-            />
-            <YAxis 
-              tick={{ fontFamily: 'Courier New, monospace', fontSize: 11, fill: '#374151' }}
-              tickFormatter={(value) => `$${(value / 1000000).toFixed(0)}M`}
-            />
-            <ChartTooltip content={<CustomTooltip />} />
-            <Bar dataKey="revenue" fill="#6b7280" name="Revenue" />
-            <Bar dataKey="investorReturn" fill="#374151" name="Investor Return" />
-          </BarChart>
-        </ResponsiveContainer>
-      </ChartContainer>
+      <Line data={financialData} options={options} />
     </div>
   )
 } 
