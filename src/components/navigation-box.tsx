@@ -278,8 +278,8 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
         </h2>
         <div style={{ fontSize: '14px', color: '#6b7280', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div>
-            <a href="mailto:info@whosthegoat.tv" style={{ color: '#2563eb', textDecoration: 'none' }}>
-              info@whosthegoat.tv
+            <a href="mailto:arscodeamatoria@gmail.com" style={{ color: '#2563eb', textDecoration: 'none' }}>
+              arscodeamatoria@gmail.com
             </a>
           </div>
           <div>Los Angeles, California</div>

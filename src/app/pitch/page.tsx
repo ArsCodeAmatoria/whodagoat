@@ -594,7 +594,7 @@ export default function PitchPage() {
           For additional information, including detailed financial models, production schedules, and partnership agreements, please contact:
         </div>
         <div className="business-text">
-          Email: <a href="mailto:investors@whosthegoat.tv" className="text-blue-600 underline">investors@whosthegoat.tv</a><br/>
+          Email: <a href="mailto:arscodeamatoria@gmail.com" className="text-blue-600 underline">arscodeamatoria@gmail.com</a><br/>
           Phone: [Phone Number]<br/>
           Location: Los Angeles, California<br/>
           Production House: NINE<br/>

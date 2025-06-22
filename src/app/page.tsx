@@ -269,7 +269,7 @@ export default function Home() {
           For more information about &ldquo;WHO&apos;S THE GOAT?&rdquo; including full business plan, casting strategy, and production timeline, contact:
         </div>
         <div className="screenplay-action">
-          Email: <a href="mailto:info@whosthegoat.tv" className="text-blue-600 underline">info@whosthegoat.tv</a><br/>
+          Email: <a href="mailto:arscodeamatoria@gmail.com" className="text-blue-600 underline">arscodeamatoria@gmail.com</a><br/>
           Location: Los Angeles, California<br/>
           Production Studio: NINE<br/>
           Status: Ready for Production
