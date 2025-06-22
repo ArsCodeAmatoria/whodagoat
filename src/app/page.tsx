@@ -3,229 +3,250 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Play, Users, Trophy, Code, Tv, DollarSign, Target, Calendar } from "lucide-react";
 
-export default function ConceptPage() {
+export default function Home() {
   return (
-    <div className="docs-content">
-      {/* Header */}
-      <div className="mb-12">
-        <h1 className="docs-title">Who&apos;s the GOAT?</h1>
-        <p className="text-xl text-muted-foreground mb-6 italic">
-          The Ultimate Reality-Tech Show
-        </p>
-        <div className="flex gap-4 mb-8">
-          <Button size="lg">
-            <Play className="w-4 h-4 mr-2" />
-            Watch Pitch
-          </Button>
-          <Button variant="outline" size="lg">
-            <Target className="w-4 h-4 mr-2" />
-            Contact Team
-          </Button>
-        </div>
+    <div className="screenplay">
+      {/* Title Page */}
+      <div className="screenplay-title">
+        "WHO'S THE GOAT?"
       </div>
+      <div className="screenplay-subtitle">
+        A Reality Competition Series Treatment
+      </div>
+      <div className="screenplay-subtitle">
+        Created by [Production Company Name]
+      </div>
+      
+      <div className="page-break"></div>
 
       {/* Logline */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Logline</h2>
-        <p className="text-lg leading-relaxed">
-          Twelve young creators enter the arena with one goal: prove they are the Greatest of All Tech. 
-          Each week, contestants must build, brand, and pitch an original app under intense deadlines 
-          and team pressure. Only one will rise to GOAT status.
-        </p>
+      <div className="screenplay-heading">
+        LOGLINE
+      </div>
+      <div className="screenplay-action">
+        Twelve young tech creators aged 18-25 compete in the ultimate reality show where coding meets drama, innovation meets elimination, and only one will prove they are the Greatest of All Tech.
+      </div>
+
+      {/* Format */}
+      <div className="screenplay-heading">
+        FORMAT
+      </div>
+      <div className="screenplay-action">
+        • GENRE: Competition Reality Series<br/>
+        • LENGTH: 12 x 60-minute episodes<br/>
+        • NETWORK: Streaming/Cable (Premium Tier)<br/>
+        • TARGET DEMO: Adults 18-34, Tech-Savvy Millennials & Gen Z<br/>
+        • PRODUCTION TIMELINE: 26 weeks (6 months total)
       </div>
 
       {/* Concept Overview */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Concept Overview</h2>
-        <p>
-          &ldquo;Who&apos;s the GOAT?&rdquo; is a high-stakes reality series where innovation meets entertainment. 
-          Each episode features new challenges centered around building apps, pitching ideas, and surviving eliminations. 
-          Contestants are judged on creativity, teamwork, code, and charisma.
-        </p>
+      <div className="screenplay-heading">
+        CONCEPT OVERVIEW
+      </div>
+      <div className="screenplay-action">
+        In a world where technical skills determine career success, "WHO'S THE GOAT?" takes twelve ambitious creators and puts them through the ultimate test. Each week brings new challenges that push contestants beyond their comfort zones—from building mobile apps under extreme time pressure to pitching their ideas to industry titans.
+      </div>
+      <div className="screenplay-action">
+        But this isn't just about code. It's about character. Cameras capture every breakdown, every breakthrough, and every betrayal as contestants navigate both technical challenges and complex social dynamics. Alliances form and crumble. Romances bloom and wither. And through it all, one question drives the competition: Who has what it takes to be the Greatest of All Tech?
+      </div>
+
+      {/* The Arena */}
+      <div className="screenplay-heading">
+        THE ARENA
+      </div>
+      <div className="screenplay-action">
+        Our contestants live and work in a custom-built tech compound featuring:
+      </div>
+      <div className="screenplay-action">
+        • STATE-OF-THE-ART DEVELOPMENT LAB: 12 individual workstations equipped with the latest hardware and software<br/>
+        • COLLABORATION SPACES: Open areas designed for team challenges and social interaction<br/>
+        • LIVING QUARTERS: Shared dormitory-style housing to maximize interpersonal drama<br/>
+        • THE PITCH ROOM: Where contestants present their work to judges and face elimination<br/>
+        • CONFESSIONAL BOOTHS: Private spaces for contestant interviews and emotional moments
+      </div>
+
+      {/* Competition Structure */}
+      <div className="screenplay-heading">
+        COMPETITION STRUCTURE
+      </div>
+      
+      <div className="screenplay-scene-heading">
+        WEEKLY CHALLENGE FORMAT:
+      </div>
+      <div className="screenplay-action">
+        <strong>SKILL CHALLENGE (Day 1-2):</strong> Individual technical test. Winner receives advantage in main challenge plus immunity from elimination.
+      </div>
+      <div className="screenplay-action">
+        <strong>MAIN CHALLENGE (Day 3-5):</strong> Complex project requiring multiple skills—coding, design, user testing, presentation. May be individual or team-based.
+      </div>
+      <div className="screenplay-action">
+        <strong>JUDGING & ELIMINATION (Day 6):</strong> Contestants present their work. Bottom performers face "The Debug"—a high-pressure technical interview. One contestant eliminated.
+      </div>
+      <div className="screenplay-action">
+        <strong>SOCIAL DYNAMICS (Throughout):</strong> 24/7 filming captures alliances, conflicts, and personal relationships that influence competition strategy.
+      </div>
+
+      {/* Cast Profile */}
+      <div className="screenplay-heading">
+        CONTESTANT PROFILE
+      </div>
+      <div className="screenplay-action">
+        We seek twelve diverse, compelling individuals who represent the future of technology:
+      </div>
+      <div className="screenplay-action">
+        • <strong>THE PRODIGY:</strong> 19-year-old coding genius with zero social skills<br/>
+        • <strong>THE ENTREPRENEUR:</strong> Failed startup founder looking for redemption<br/>
+        • <strong>THE INFLUENCER:</strong> Social media star trying to prove they have real skills<br/>
+        • <strong>THE OUTSIDER:</strong> Self-taught developer from rural America<br/>
+        • <strong>THE CORPORATE REFUGEE:</strong> Big Tech burnout seeking creative freedom<br/>
+        • <strong>THE ACTIVIST:</strong> Passionate about technology for social good<br/>
+        • <strong>THE COMPETITOR:</strong> Hackathon champion who lives to win<br/>
+        • <strong>THE ARTIST:</strong> Creative coder blending technology with art<br/>
+        • <strong>THE HUSTLER:</strong> Street-smart developer with big dreams<br/>
+        • <strong>THE ACADEMIC:</strong> Computer science PhD with imposter syndrome<br/>
+        • <strong>THE VETERAN:</strong> Career-changer using military discipline<br/>
+        • <strong>THE WILD CARD:</strong> Unconventional background, unexpected skills
+      </div>
+
+      {/* Business Section */}
+      <div className="business-section">
+        <div className="business-heading">
+          BUSINESS OVERVIEW
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          <Card>
-            <CardHeader>
-              <Tv className="w-6 h-6 mb-2" />
-              <CardTitle className="text-base">Format</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm">Weekly episodes (44 mins), 12 contestants, 1 winner</p>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader>
-              <Code className="w-6 h-6 mb-2" />
-              <CardTitle className="text-base">Genre</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm">Reality Competition / Tech / Innovation</p>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader>
-              <Users className="w-6 h-6 mb-2" />
-              <CardTitle className="text-base">Audience</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm">Gen Z, tech-curious Millennials, creators, startup fans</p>
-            </CardContent>
-          </Card>
+        <div className="business-subheading">
+          MARKET OPPORTUNITY
+        </div>
+        <div className="business-text">
+          • Reality TV: $2.6B annual U.S. market<br/>
+          • Tech Education: $366B global market<br/>
+          • Target Demographic: 68M Gen Z viewers in U.S.<br/>
+          • Streaming Growth: 15% year-over-year increase
+        </div>
+
+        <div className="business-subheading">
+          REVENUE PROJECTIONS (SEASON 1)
+        </div>
+        <table className="business-table">
+          <thead>
+            <tr>
+              <th>REVENUE STREAM</th>
+              <th>AMOUNT</th>
+              <th>PERCENTAGE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Streaming Rights</td>
+              <td>$8,000,000</td>
+              <td>58%</td>
+            </tr>
+            <tr>
+              <td>Advertising Revenue</td>
+              <td>$3,500,000</td>
+              <td>25%</td>
+            </tr>
+            <tr>
+              <td>Sponsorship Deals</td>
+              <td>$1,800,000</td>
+              <td>13%</td>
+            </tr>
+            <tr>
+              <td>Merchandise/Licensing</td>
+              <td>$500,000</td>
+              <td>4%</td>
+            </tr>
+            <tr>
+              <td><strong>TOTAL REVENUE</strong></td>
+              <td><strong>$13,800,000</strong></td>
+              <td><strong>100%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div className="business-subheading">
+          PRODUCTION BUDGET
+        </div>
+        <div className="business-text">
+          Total Production Cost: $6,000,000<br/>
+          Cost Per Episode: $500,000<br/>
+          <strong>GROSS PROFIT MARGIN: 56% ($7,800,000)</strong>
         </div>
       </div>
 
-      {/* Format Structure */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Format Structure</h2>
-        
-        <h3 className="docs-heading">Episode Breakdown</h3>
-        <div className="space-y-4">
-          <div className="border-l-4 border-primary pl-4">
-            <h4 className="font-semibold text-lg">The Drop</h4>
-            <p>New theme (e.g. HealthTech, AI Tools, Gen Z Social)</p>
-          </div>
-          
-          <div className="border-l-4 border-primary pl-4">
-            <h4 className="font-semibold text-lg">The Build</h4>
-            <p>Teams race to design, develop, and brand their app</p>
-          </div>
-          
-          <div className="border-l-4 border-primary pl-4">
-            <h4 className="font-semibold text-lg">The Pitch</h4>
-            <p>Present to judges and audience</p>
-          </div>
-          
-          <div className="border-l-4 border-primary pl-4">
-            <h4 className="font-semibold text-lg">The Cut</h4>
-            <p>Losing team must vote one off</p>
-          </div>
-          
-          <div className="border-l-4 border-yellow-500 pl-4">
-            <h4 className="font-semibold text-lg">The GOAT Rises</h4>
-            <p>Last one standing is crowned the GOAT</p>
-          </div>
-        </div>
+      {/* Why Now */}
+      <div className="screenplay-heading">
+        WHY NOW?
+      </div>
+      <div className="screenplay-action">
+        The convergence of several cultural and economic factors makes this the perfect moment for "WHO'S THE GOAT?":
+      </div>
+      <div className="screenplay-action">
+        <strong>TECH SKILLS CRISIS:</strong> 4.4 million unfilled tech jobs in the U.S. create massive audience interest in tech careers.
+      </div>
+      <div className="screenplay-action">
+        <strong>REALITY TV EVOLUTION:</strong> Audiences crave authentic competition with real-world impact, not manufactured drama.
+      </div>
+      <div className="screenplay-action">
+        <strong>STREAMING WARS:</strong> Platforms desperately need distinctive content to differentiate from competitors.
+      </div>
+      <div className="screenplay-action">
+        <strong>SOCIAL MEDIA INTEGRATION:</strong> Tech-savvy contestants naturally create viral moments and online engagement.
       </div>
 
-      {/* Differentiators */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Differentiators</h2>
-        <ul className="space-y-2">
-          <li>• Combines tech, drama, and entrepreneurship</li>
-          <li>• Features real digital product creation</li>
-          <li>• Designed for social virality and audience interaction</li>
-          <li>• Promotes real-world skills: coding, marketing, design, leadership</li>
-          <li>• Showcased apps can launch post-episode for live public feedback</li>
-        </ul>
+      {/* The Hook */}
+      <div className="screenplay-heading">
+        THE HOOK
+      </div>
+      <div className="screenplay-action">
+        "WHO'S THE GOAT?" isn't just entertainment—it's education disguised as competition. Viewers don't just watch; they learn. Each episode includes:
+      </div>
+      <div className="screenplay-action">
+        • SKILL SPOTLIGHTS: Brief segments explaining technical concepts<br/>
+        • MENTOR MOMENTS: Industry leaders share career advice<br/>
+        • VIEWER CHALLENGES: Online coding challenges tied to episode content<br/>
+        • CAREER PATHS: Profiles of different tech career options
       </div>
 
-      {/* Target Market */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Target Market</h2>
-        
-        <div className="overflow-x-auto">
-          <table className="docs-content table">
-            <thead>
-              <tr>
-                <th>Segment</th>
-                <th>Why They Watch</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Tech Creators</strong></td>
-                <td>See tools, workflows, and creative builds</td>
-              </tr>
-              <tr>
-                <td><strong>Gen Z / Millennials</strong></td>
-                <td>Personalities, ambition, and competition</td>
-              </tr>
-              <tr>
-                <td><strong>Investors / Founders</strong></td>
-                <td>Talent scouting and startup energy</td>
-              </tr>
-              <tr>
-                <td><strong>General Viewers</strong></td>
-                <td>Fast-paced drama and relatable challenges</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      {/* Finale */}
+      <div className="screenplay-heading">
+        SEASON FINALE
+      </div>
+      <div className="screenplay-action">
+        The final three contestants have 48 hours to build and launch a complete application. They must:
+      </div>
+      <div className="screenplay-action">
+        • Develop a working product from concept to deployment<br/>
+        • Present to a panel of tech industry legends<br/>
+        • Defend their work in a live Q&A session<br/>
+        • Win over a studio audience of tech professionals
+      </div>
+      <div className="screenplay-action">
+        The winner receives:
+      </div>
+      <div className="screenplay-action">
+        • $100,000 cash prize<br/>
+        • One-year mentorship with industry leader<br/>
+        • $50,000 in development resources<br/>
+        • Guaranteed meetings with top VCs and tech companies<br/>
+        • The title: Greatest of All Tech
       </div>
 
-      {/* Grand Prize */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Grand Prize</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <Card>
-            <CardHeader>
-              <DollarSign className="w-8 h-8 mb-2 text-green-600" />
-              <CardTitle>$100K in startup funding</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>Seed capital to launch your winning application</p>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader>
-              <Users className="w-8 h-8 mb-2 text-blue-600" />
-              <CardTitle>Elite mentorship</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>1-on-1 guidance from top founders and VCs</p>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="text-center p-6 bg-muted rounded-lg">
-          <Trophy className="w-12 h-12 mx-auto mb-4 text-yellow-500" />
-          <h3 className="docs-heading">The Crown: The Title of THE GOAT</h3>
-          <p>Recognition as the Greatest of All Tech, opening doors across Silicon Valley and beyond.</p>
-        </div>
+      {/* Contact */}
+      <div className="screenplay-heading">
+        CONTACT
+      </div>
+      <div className="screenplay-action">
+        For more information about "WHO'S THE GOAT?" including full business plan, casting strategy, and production timeline, contact:
+      </div>
+      <div className="screenplay-action">
+        Email: info@whosthegoat.tv<br/>
+        Location: Los Angeles, California<br/>
+        Status: Ready for Production
       </div>
 
-      {/* Expansion Potential */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Expansion Potential</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="docs-heading">Spin-offs</h3>
-            <ul>
-              <li>• High School GOAT</li>
-              <li>• GOAT Global</li>
-              <li>• GOAT: AI Edition</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="docs-heading">Distribution</h3>
-            <ul>
-              <li>• Netflix, Prime, YouTube Originals</li>
-              <li>• International format licensing</li>
-              <li>• Streaming-first strategy</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="mt-6">
-          <h3 className="docs-heading">Brand Partnerships</h3>
-          <p>GitHub, Vercel, Y Combinator, Figma, Notion, Discord</p>
-        </div>
-      </div>
-
-      {/* Connect */}
-      <div className="docs-section">
-        <h2 className="docs-subtitle">Connect</h2>
-        <div className="space-y-2">
-          <p><strong>TikTok:</strong> <a href="https://tiktok.com/@whosthegoat" className="text-primary hover:underline">@WhosTheGOAT</a></p>
-          <p><strong>Website:</strong> <a href="https://whosthegoat.tv" className="text-primary hover:underline">whosthegoat.tv</a></p>
-          <p><strong>Contact:</strong> <a href="mailto:info@whosthegoat.tv" className="text-primary hover:underline">info@whosthegoat.tv</a></p>
-        </div>
+      <div className="screenplay-transition">
+        FADE OUT.
       </div>
     </div>
   );

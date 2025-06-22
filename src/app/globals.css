@@ -3,13 +3,13 @@
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
+  --foreground: 0 0% 0%;
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 3.9%;
+  --card-foreground: 0 0% 0%;
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 3.9%;
-  --primary: 0 0% 9%;
-  --primary-foreground: 0 0% 98%;
+  --popover-foreground: 0 0% 0%;
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 0 0% 96.1%;
   --secondary-foreground: 0 0% 9%;
   --muted: 0 0% 96.1%;
@@ -21,29 +21,7 @@
   --border: 0 0% 89.8%;
   --input: 0 0% 89.8%;
   --ring: 0 0% 3.9%;
-  --radius: 0.5rem;
-}
-
-.dark {
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 0 0% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: 0 0% 83.1%;
+  --radius: 0.25rem;
 }
 
 * {
@@ -53,111 +31,219 @@
 body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));
-  font-family: var(--font-inter);
-  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Screenplay/Script Formatting */
+.screenplay {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  line-height: 1.6;
+  color: black;
+  background: white;
+  max-width: 6.5in;
+  margin: 0 auto;
+  padding: 1in;
+  min-height: 8.5in;
+}
+
+.screenplay-title {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2em 0 1em 0;
+  letter-spacing: 0.1em;
+}
+
+.screenplay-subtitle {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  text-align: center;
+  margin: 0 0 2em 0;
+  font-style: italic;
+}
+
+.screenplay-heading {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 2em 0 1em 0;
+  letter-spacing: 0.05em;
+}
+
+.screenplay-character {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5em 0 0.5em 3.5in;
+  text-align: left;
+}
+
+.screenplay-dialogue {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  margin: 0 0 1em 2.5in;
+  max-width: 3.5in;
+  line-height: 1.5;
+}
+
+.screenplay-action {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  margin: 1em 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.screenplay-parenthetical {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  margin: 0 0 0.5em 3in;
+  font-style: italic;
+}
+
+.screenplay-transition {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 1em 0;
+}
+
+.screenplay-scene-heading {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 2em 0 1em 0;
+  letter-spacing: 0.05em;
+}
+
+/* Business document styling for pitch sections */
+.business-section {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  margin: 2em 0;
+  padding: 1em;
+  border: 1px solid #000;
+  background: #f9f9f9;
+}
+
+.business-heading {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 1em 0;
+  letter-spacing: 0.1em;
+}
+
+.business-subheading {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5em 0 0.5em 0;
+  text-decoration: underline;
+}
+
+.business-text {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  line-height: 1.6;
+  margin: 0.5em 0;
+}
+
+.business-list {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  margin: 0.5em 0 0.5em 2em;
   line-height: 1.6;
 }
 
-/* Mr Dafoe script font for titles */
-.script-title {
-  font-family: var(--font-script);
-  font-weight: 400;
-  line-height: 1.1;
-}
-
-/* Main title styling */
-h1.script-title,
-.docs-content h1 {
-  font-family: var(--font-script);
-  font-size: clamp(3rem, 10vw, 5rem);
-  font-weight: 400;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
-  color: hsl(var(--foreground));
-}
-
-/* Subtitle styling */
-h2.script-title,
-.docs-content h2 {
-  font-family: var(--font-script);
-  font-size: clamp(2rem, 6vw, 3rem);
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: hsl(var(--muted-foreground));
-}
-
-/* Heading styling */
-h3.script-title,
-.docs-content h3 {
-  font-family: var(--font-script);
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  font-weight: 400;
-  line-height: 1.3;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: hsl(var(--foreground));
-}
-
-.docs-content p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  color: hsl(var(--muted-foreground));
-}
-
-.docs-content ul, .docs-content ol {
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.docs-content li {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 0.5rem;
-  color: hsl(var(--muted-foreground));
-}
-
-.docs-content strong {
-  font-weight: 600;
-  color: hsl(var(--foreground));
-}
-
-.docs-content code {
-  background: hsl(var(--muted));
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.25rem;
-  font-size: 0.9em;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-/* Tables */
-.docs-content table {
+.business-table {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 11pt;
   width: 100%;
   border-collapse: collapse;
-  margin: 2rem 0;
+  margin: 1em 0;
 }
 
-.docs-content th,
-.docs-content td {
-  padding: 0.75rem 1rem;
+.business-table th,
+.business-table td {
+  border: 1px solid #000;
+  padding: 0.5em;
   text-align: left;
-  border-bottom: 1px solid hsl(var(--border));
 }
 
-.docs-content th {
-  font-weight: 600;
-  color: hsl(var(--foreground));
-  background: hsl(var(--muted));
+.business-table th {
+  background: #e0e0e0;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-/* Cards and sections */
-.docs-section {
-  margin-bottom: 3rem;
-  padding: 2rem;
-  border: 1px solid hsl(var(--border));
-  border-radius: 0.5rem;
-  background: hsl(var(--card));
+/* Page break for printing */
+.page-break {
+  page-break-before: always;
+}
+
+/* Sidebar styling */
+.sidebar {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 11pt;
+  background: #f5f5f5;
+  border-right: 2px solid #000;
+}
+
+.sidebar-title {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1em 0;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-nav {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+/* Remove modern UI elements */
+.card {
+  border: 1px solid #000;
+  background: white;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.button {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12pt;
+  background: #000;
+  color: white;
+  border: 2px solid #000;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: white;
+  color: #000;
 }
 
 /* Smooth scrolling */
@@ -167,24 +253,23 @@ html {
 
 /* Selection styling */
 ::selection {
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background: #000;
+  color: white;
 }
 
-/* Sidebar scrollbar */
-.sidebar-scroll::-webkit-scrollbar {
-  width: 6px;
-}
-
-.sidebar-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.sidebar-scroll::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
-  border-radius: 3px;
-}
-
-.sidebar-scroll::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground));
+/* Print styles */
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+  
+  .screenplay {
+    padding: 1in;
+    margin: 0;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
 }

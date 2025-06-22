@@ -1,58 +1,24 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import { File, Users, Cog, TrendingUp, Megaphone, Presentation } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, BarChart3, Calendar, Target, DollarSign } from "lucide-react";
-
-const navigation = [
-  {
-    title: "Overview",
-    items: [
-      { title: "Concept", href: "/", icon: File },
-      { title: "Pitch Deck", href: "/pitch", icon: Presentation },
-    ],
-  },
-  {
-    title: "Production",
-    items: [
-      { title: "Production Plan", href: "/production", icon: Cog },
-      { title: "Casting Criteria", href: "/casting", icon: Users },
-      { title: "Technical Specs", href: "/technical", icon: Cog },
-    ],
-  },
-  {
-    title: "Strategy",
-    items: [
-      { title: "Marketing Strategy", href: "/marketing", icon: Megaphone },
-      { title: "Business Model", href: "/business", icon: TrendingUp },
-    ],
-  },
-];
 
 interface NavItem {
   title: string;
   href: string;
-  icon: React.ComponentType<{ className?: string }>;
   description: string;
 }
 
 const navItems: NavItem[] = [
   {
-    title: "Overview",
+    title: "TREATMENT",
     href: "/",
-    icon: FileText,
-    description: "Show concept and format"
+    description: "Series Overview & Format"
   },
   {
-    title: "Investment Pitch",
+    title: "BUSINESS PLAN",
     href: "/pitch",
-    icon: DollarSign,
-    description: "Business case and financials"
+    description: "Financial Projections & Investment"
   }
 ];
 
@@ -60,74 +26,105 @@ export function DocsSidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="w-80 bg-card border-r border-border h-screen overflow-y-auto sidebar-scroll">
+    <div className="sidebar w-80 h-screen overflow-y-auto">
       <div className="p-6">
-        {/* Logo/Title */}
-        <div className="mb-8">
-          <h1 className="script-title text-2xl mb-2">Who&apos;s the GOAT?</h1>
-          <p className="text-sm text-muted-foreground">
-            The Ultimate Reality-Tech Show
-          </p>
+        {/* Title */}
+        <div className="mb-8 text-center border-b-2 border-black pb-4">
+          <div className="sidebar-title">
+            "WHO'S THE GOAT?"
+          </div>
+          <div className="text-xs uppercase tracking-wider">
+            REALITY COMPETITION SERIES
+          </div>
+          <div className="text-xs mt-2">
+            CONFIDENTIAL TREATMENT
+          </div>
         </div>
 
         {/* Navigation */}
-        <nav className="space-y-2">
+        <nav className="sidebar-nav space-y-1 mb-8">
+          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
+            DOCUMENTS
+          </div>
           {navItems.map((item) => {
-            const Icon = item.icon;
             const isActive = pathname === item.href;
             
             return (
               <Link key={item.href} href={item.href}>
-                <Button
-                  variant={isActive ? "default" : "ghost"}
-                  className="w-full justify-start h-auto p-3"
-                >
-                  <Icon className="mr-3 h-4 w-4 flex-shrink-0" />
-                  <div className="text-left">
-                    <div className="font-medium">{item.title}</div>
-                    <div className="text-xs opacity-70">{item.description}</div>
-                  </div>
-                </Button>
+                <div className={`p-3 border ${isActive ? 'bg-black text-white' : 'bg-white text-black hover:bg-gray-100'} cursor-pointer`}>
+                  <div className="font-bold text-xs uppercase tracking-wider">{item.title}</div>
+                  <div className="text-xs mt-1">{item.description}</div>
+                </div>
               </Link>
             );
           })}
         </nav>
 
-        {/* Quick Stats Card */}
-        <Card className="mt-8">
-          <CardContent className="p-4">
-            <h3 className="font-semibold mb-3 text-sm">Quick Stats</h3>
-            <div className="space-y-2 text-xs">
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Contestants</span>
-                <span className="font-medium">12</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Episodes</span>
-                <span className="font-medium">12</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Grand Prize</span>
-                <span className="font-medium">$100K</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Production Budget</span>
-                <span className="font-medium">$6M</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Projected Revenue</span>
-                <span className="font-medium">$13.8M</span>
-              </div>
+        {/* Production Details */}
+        <div className="border border-black p-4 mb-6">
+          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
+            PRODUCTION DETAILS
+          </div>
+          <div className="space-y-2 text-xs">
+            <div className="flex justify-between">
+              <span>FORMAT:</span>
+              <span>12 x 60 MIN</span>
             </div>
-          </CardContent>
-        </Card>
+            <div className="flex justify-between">
+              <span>CONTESTANTS:</span>
+              <span>12</span>
+            </div>
+            <div className="flex justify-between">
+              <span>GRAND PRIZE:</span>
+              <span>$100,000</span>
+            </div>
+            <div className="flex justify-between">
+              <span>BUDGET:</span>
+              <span>$6M</span>
+            </div>
+            <div className="flex justify-between">
+              <span>REVENUE:</span>
+              <span>$13.8M</span>
+            </div>
+            <div className="flex justify-between border-t border-black pt-2 font-bold">
+              <span>PROFIT MARGIN:</span>
+              <span>56%</span>
+            </div>
+          </div>
+        </div>
 
-        {/* Contact Info */}
-        <div className="mt-8 p-4 bg-muted/50 rounded-lg">
-          <h3 className="font-semibold mb-2 text-sm">Contact</h3>
-          <div className="space-y-1 text-xs text-muted-foreground">
-            <p>info@whosthegoat.tv</p>
-            <p>Los Angeles, CA</p>
+        {/* Status */}
+        <div className="border border-black p-4 mb-6">
+          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
+            PROJECT STATUS
+          </div>
+          <div className="text-xs space-y-1">
+            <div>STATUS: READY FOR PRODUCTION</div>
+            <div>CREATED: 2024</div>
+            <div>LOCATION: LOS ANGELES, CA</div>
+            <div>GENRE: REALITY COMPETITION</div>
+            <div>TARGET: STREAMING/CABLE</div>
+          </div>
+        </div>
+
+        {/* Contact */}
+        <div className="border border-black p-4">
+          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
+            CONTACT INFORMATION
+          </div>
+          <div className="text-xs space-y-1">
+            <div>EMAIL: INFO@WHOSTHEGOAT.TV</div>
+            <div>LOCATION: LOS ANGELES, CA</div>
+            <div>AVAILABILITY: IMMEDIATE</div>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-6 text-center text-xs">
+          <div className="border-t border-black pt-3">
+            © 2024 WHO'S THE GOAT?<br/>
+            ALL RIGHTS RESERVED<br/>
+            CONFIDENTIAL MATERIAL
           </div>
         </div>
       </div>
