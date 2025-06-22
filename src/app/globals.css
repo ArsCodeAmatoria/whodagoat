@@ -177,19 +177,29 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
+  border: none;
 }
 
 .business-table th,
 .business-table td {
-  border: 1px solid #000;
-  padding: 0.5em;
+  border: none;
+  padding: 0.75em 1em;
   text-align: left;
 }
 
 .business-table th {
-  background: #e0e0e0;
+  background: #f5f5f5;
   font-weight: bold;
   text-transform: uppercase;
+  color: #333;
+}
+
+.business-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.business-table tr:nth-child(odd) {
+  background: white;
 }
 
 /* Page break for printing */
