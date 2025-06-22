@@ -92,6 +92,23 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
           >
             Business Plan
           </Link>
+          <Link 
+            href="/login" 
+            style={{
+              display: 'block',
+              padding: '12px 16px',
+              borderRadius: '8px',
+              fontWeight: '500',
+              fontSize: '14px',
+              textDecoration: 'none',
+              transition: 'all 0.2s',
+              background: '#dc2626',
+              color: '#fff',
+              border: '1px solid #dc2626'
+            }}
+          >
+            🔒 Confidential Access
+          </Link>
         </div>
       </div>
 
