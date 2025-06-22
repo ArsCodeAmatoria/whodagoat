@@ -14,7 +14,7 @@ export default function PitchPage() {
           BUSINESS PLAN & INVESTMENT PROPOSAL
         </div>
         <div className="screenplay-subtitle">
-          Production Company: Ars Code Amatoria IX
+          Production Company: NINE
         </div>
         <div className="screenplay-subtitle">
           Date: {new Date().getFullYear()}
@@ -413,7 +413,7 @@ export default function PitchPage() {
         </div>
 
         <div className="business-subheading">
-          EXECUTIVE PRODUCER | NINE DIVISION
+          EXECUTIVE PRODUCER
         </div>
         <div className="business-text">
           [Name], Executive Producer<br/>
@@ -421,7 +421,7 @@ export default function PitchPage() {
           • Credits include [Major Reality Shows]<br/>
           • Emmy Award winner, industry relationships<br/>
           • Expertise in casting, story development, post-production<br/>
-          • Ars Code Amatoria IX Leadership Team
+          • NINE Leadership Team
         </div>
 
         <div className="business-subheading">
@@ -597,8 +597,7 @@ export default function PitchPage() {
           Email: <a href="mailto:investors@whosthegoat.tv" className="text-blue-600 underline">investors@whosthegoat.tv</a><br/>
           Phone: [Phone Number]<br/>
           Location: Los Angeles, California<br/>
-          Production House: Ars Code Amatoria NINE<br/>
-          Series Code: IX<br/>
+          Production House: NINE<br/>
           Status: Series A Funding Round Open
         </div>
 
