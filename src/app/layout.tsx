@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-white`}>
-        <div className="min-h-screen">
+        <div className="min-h-screen flex">
           {/* Main Content */}
-          <main className="max-w-4xl mx-auto px-6 py-8">
+          <main className="flex-1 max-w-4xl mx-auto px-6 py-8 pr-80">
             {children}
           </main>
         </div>
