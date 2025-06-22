@@ -36,6 +36,15 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
         }}>
           A reality competition series pitch for the next generation of tech creators
         </p>
+        <p style={{ 
+          fontSize: '12px', 
+          color: '#374151', 
+          fontWeight: '600',
+          marginTop: '8px',
+          fontFamily: 'Courier New, monospace' 
+        }}>
+          Ars Code Amatoria NINE | Series IX
+        </p>
       </div>
 
       {/* Navigation */}
@@ -196,6 +205,16 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
               }}>
                 Education
               </span>
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#1f2937', 
+                color: '#ffffff', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
+                NINE
+              </span>
             </>
           ) : (
             <>
@@ -229,6 +248,16 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
               }}>
                 Series A Funding
               </span>
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#1f2937', 
+                color: '#ffffff', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
+                IX
+              </span>
             </>
           )}
         </div>
@@ -249,6 +278,8 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
         <div style={{ fontSize: '14px', color: '#6b7280', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div>Created: {new Date().getFullYear()}</div>
           <div>Location: Los Angeles, CA</div>
+          <div>Studio: Ars Code Amatoria IX</div>
+          <div>Production ID: NINE</div>
           <div>Status: Development</div>
         </div>
       </div>
@@ -272,6 +303,9 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
             </a>
           </div>
           <div>Los Angeles, California</div>
+          <div style={{ fontSize: '12px', fontWeight: '500', color: '#374151' }}>
+            Production House: Ars Code Amatoria NINE
+          </div>
           <div style={{ fontSize: '12px', color: '#dc2626', fontWeight: '500', marginTop: '12px' }}>
             CONFIDENTIAL DOCUMENT
           </div>
