@@ -37,13 +37,13 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
           A reality competition series pitch for the next generation of tech creators
         </p>
         <p style={{ 
-          fontSize: '12px', 
+          fontSize: '18px', 
           color: '#374151', 
-          fontWeight: '600',
+          fontWeight: 'bold',
           marginTop: '8px',
           fontFamily: 'Courier New, monospace' 
         }}>
-          NINE IX
+          IX
         </p>
       </div>
 
