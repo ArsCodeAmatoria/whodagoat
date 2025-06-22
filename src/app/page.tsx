@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationBox from "@/components/navigation-box";
+import NavigationBox from "../components/navigation-box";
 
 export default function Home() {
   return (

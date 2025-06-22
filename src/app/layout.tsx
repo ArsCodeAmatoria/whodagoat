@@ -17,11 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-white`}>
-        <div className="min-h-screen flex">
-          {/* Main Content */}
-          <main className="flex-1 max-w-4xl mx-auto px-6 py-8 pr-80">
-            {children}
-          </main>
+        <div className="min-h-screen">
+          {/* Main Content with proper spacing for fixed navigation box */}
+          <div className="pr-80">
+            <main className="px-6 py-8 max-w-4xl mx-auto">
+              {children}
+            </main>
+          </div>
         </div>
       </body>
     </html>

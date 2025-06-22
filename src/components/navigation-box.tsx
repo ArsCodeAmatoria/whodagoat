@@ -7,40 +7,79 @@ interface NavigationBoxProps {
 
 export default function NavigationBox({ currentPage }: NavigationBoxProps) {
   return (
-    <div className="fixed top-0 right-0 w-72 h-screen bg-white border-l border-gray-200 p-6 overflow-y-auto">
+    <div style={{
+      position: 'fixed', 
+      top: 0, 
+      right: 0, 
+      width: '288px', 
+      height: '100vh', 
+      background: 'white', 
+      borderLeft: '1px solid #e5e7eb',
+      padding: '24px',
+      overflowY: 'auto',
+      zIndex: 50
+    }}>
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Courier New, monospace' }}>
+      <div style={{ marginBottom: '32px' }}>
+        <h1 style={{ 
+          fontSize: '24px', 
+          fontWeight: 'bold', 
+          marginBottom: '8px',
+          fontFamily: 'Courier New, monospace' 
+        }}>
           WHO&apos;S THE GOAT?
         </h1>
-        <p className="text-sm text-gray-600 leading-relaxed">
+        <p style={{ 
+          fontSize: '14px', 
+          color: '#6b7280', 
+          lineHeight: '1.6' 
+        }}>
           A reality competition series pitch for the next generation of tech creators
         </p>
       </div>
 
       {/* Navigation */}
-      <div className="mb-8">
-        <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">
+      <div style={{ marginBottom: '32px' }}>
+        <h2 style={{ 
+          fontSize: '12px', 
+          fontWeight: '600', 
+          color: '#111827', 
+          textTransform: 'uppercase', 
+          letterSpacing: '0.05em',
+          marginBottom: '16px' 
+        }}>
           Navigation
         </h2>
-        <div className="space-y-3">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <Link 
             href="/" 
-            className={`block px-4 py-3 rounded-lg font-medium text-sm transition-colors ${
-              currentPage === 'treatment' 
-                ? 'bg-black text-white' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+            style={{
+              display: 'block',
+              padding: '12px 16px',
+              borderRadius: '8px',
+              fontWeight: '500',
+              fontSize: '14px',
+              textDecoration: 'none',
+              transition: 'all 0.2s',
+              background: currentPage === 'treatment' ? '#000' : '#f3f4f6',
+              color: currentPage === 'treatment' ? '#fff' : '#374151'
+            }}
           >
             Treatment Document
           </Link>
           <Link 
             href="/pitch" 
-            className={`block px-4 py-3 rounded-lg font-medium text-sm transition-colors ${
-              currentPage === 'business' 
-                ? 'bg-black text-white' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+            style={{
+              display: 'block',
+              padding: '12px 16px',
+              borderRadius: '8px',
+              fontWeight: '500',
+              fontSize: '14px',
+              textDecoration: 'none',
+              transition: 'all 0.2s',
+              background: currentPage === 'business' ? '#000' : '#f3f4f6',
+              color: currentPage === 'business' ? '#fff' : '#374151'
+            }}
           >
             Business Plan
           </Link>
@@ -48,47 +87,54 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
       </div>
 
       {/* Key Metrics */}
-      <div className="mb-8">
-        <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">
+      <div style={{ marginBottom: '32px' }}>
+        <h2 style={{ 
+          fontSize: '12px', 
+          fontWeight: '600', 
+          color: '#111827', 
+          textTransform: 'uppercase', 
+          letterSpacing: '0.05em',
+          marginBottom: '16px' 
+        }}>
           {currentPage === 'treatment' ? 'Show Details' : 'Key Metrics'}
         </h2>
-        <div className="space-y-3 text-sm">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '14px' }}>
           {currentPage === 'treatment' ? (
             <>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Format:</span>
-                <span className="font-medium">12 episodes, 60 min</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Format:</span>
+                <span style={{ fontWeight: '500' }}>12 episodes, 60 min</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Contestants:</span>
-                <span className="font-medium">12 tech creators</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Contestants:</span>
+                <span style={{ fontWeight: '500' }}>12 tech creators</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Grand Prize:</span>
-                <span className="font-medium">$100,000</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Grand Prize:</span>
+                <span style={{ fontWeight: '500' }}>$100,000</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Budget:</span>
-                <span className="font-medium">$6M production</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Budget:</span>
+                <span style={{ fontWeight: '500' }}>$6M production</span>
               </div>
             </>
           ) : (
             <>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Revenue:</span>
-                <span className="font-medium text-green-600">$13.8M</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Revenue:</span>
+                <span style={{ fontWeight: '500', color: '#059669' }}>$13.8M</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Profit:</span>
-                <span className="font-medium text-green-600">$7.8M</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Profit:</span>
+                <span style={{ fontWeight: '500', color: '#059669' }}>$7.8M</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Margin:</span>
-                <span className="font-medium text-green-600">56%</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Margin:</span>
+                <span style={{ fontWeight: '500', color: '#059669' }}>56%</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Funding:</span>
-                <span className="font-medium text-blue-600">$10M</span>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ color: '#6b7280' }}>Funding:</span>
+                <span style={{ fontWeight: '500', color: '#2563eb' }}>$10M</span>
               </div>
             </>
           )}
@@ -96,35 +142,91 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
       </div>
 
       {/* Categories/Status */}
-      <div className="mb-8">
-        <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">
+      <div style={{ marginBottom: '32px' }}>
+        <h2 style={{ 
+          fontSize: '12px', 
+          fontWeight: '600', 
+          color: '#111827', 
+          textTransform: 'uppercase', 
+          letterSpacing: '0.05em',
+          marginBottom: '16px' 
+        }}>
           {currentPage === 'treatment' ? 'Categories' : 'Status'}
         </h2>
-        <div className="flex flex-wrap gap-2">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
           {currentPage === 'treatment' ? (
             <>
-              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#dbeafe', 
+                color: '#1e40af', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
                 Reality TV
               </span>
-              <span className="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#dcfce7', 
+                color: '#166534', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
                 Technology
               </span>
-              <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#f3e8ff', 
+                color: '#7c3aed', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
                 Competition
               </span>
-              <span className="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#fed7aa', 
+                color: '#c2410c', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
                 Education
               </span>
             </>
           ) : (
             <>
-              <span className="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#dcfce7', 
+                color: '#166534', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
                 Ready for Production
               </span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#dbeafe', 
+                color: '#1e40af', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
                 Seeking Investment
               </span>
-              <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">
+              <span style={{ 
+                padding: '4px 12px', 
+                background: '#fef3c7', 
+                color: '#92400e', 
+                fontSize: '12px', 
+                fontWeight: '500', 
+                borderRadius: '9999px' 
+              }}>
                 Series A Funding
               </span>
             </>
@@ -133,11 +235,18 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
       </div>
 
       {/* Project Info */}
-      <div className="mb-8">
-        <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">
+      <div style={{ marginBottom: '32px' }}>
+        <h2 style={{ 
+          fontSize: '12px', 
+          fontWeight: '600', 
+          color: '#111827', 
+          textTransform: 'uppercase', 
+          letterSpacing: '0.05em',
+          marginBottom: '16px' 
+        }}>
           Project Info
         </h2>
-        <div className="text-sm text-gray-600 space-y-2">
+        <div style={{ fontSize: '14px', color: '#6b7280', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div>Created: {new Date().getFullYear()}</div>
           <div>Location: Los Angeles, CA</div>
           <div>Status: Development</div>
@@ -145,18 +254,25 @@ export default function NavigationBox({ currentPage }: NavigationBoxProps) {
       </div>
 
       {/* Contact */}
-      <div className="border-t border-gray-200 pt-6">
-        <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-4">
+      <div style={{ borderTop: '1px solid #e5e7eb', paddingTop: '24px' }}>
+        <h2 style={{ 
+          fontSize: '12px', 
+          fontWeight: '600', 
+          color: '#111827', 
+          textTransform: 'uppercase', 
+          letterSpacing: '0.05em',
+          marginBottom: '16px' 
+        }}>
           Contact
         </h2>
-        <div className="text-sm text-gray-600 space-y-2">
+        <div style={{ fontSize: '14px', color: '#6b7280', display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <div>
-            <a href="mailto:info@whosthegoat.tv" className="text-blue-600 hover:text-blue-800 transition-colors">
+            <a href="mailto:info@whosthegoat.tv" style={{ color: '#2563eb', textDecoration: 'none' }}>
               info@whosthegoat.tv
             </a>
           </div>
           <div>Los Angeles, California</div>
-          <div className="text-xs text-red-600 font-medium mt-3">
+          <div style={{ fontSize: '12px', color: '#dc2626', fontWeight: '500', marginTop: '12px' }}>
             CONFIDENTIAL DOCUMENT
           </div>
         </div>
