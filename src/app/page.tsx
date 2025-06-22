@@ -14,7 +14,7 @@ export default function Home() {
           A Reality Competition Series Treatment
         </div>
         <div className="screenplay-subtitle">
-          Created by Ars Code Amatoria
+          Created by Ars Code Amatoria NINE
         </div>
         
         <div className="page-break"></div>
@@ -240,7 +240,8 @@ export default function Home() {
           <strong>PRODUCTION READINESS:</strong> All systems go for immediate production start<br/>
           <strong>INVESTMENT STATUS:</strong> Seeking $10M Series A funding<br/>
           <strong>CASTING PREPARATION:</strong> Strategy complete, ready to launch<br/>
-          <strong>LOCATION:</strong> Los Angeles, California
+          <strong>LOCATION:</strong> Los Angeles, California<br/>
+          <strong>STUDIO CODE:</strong> NINE | Production ID: IX
         </div>
 
         {/* Contact */}
@@ -253,6 +254,7 @@ export default function Home() {
         <div className="screenplay-action">
           Email: <a href="mailto:info@whosthegoat.tv" className="text-blue-600 underline">info@whosthegoat.tv</a><br/>
           Location: Los Angeles, California<br/>
+          Production Studio: Ars Code Amatoria IX<br/>
           Status: Ready for Production
         </div>
         <div className="screenplay-action">
