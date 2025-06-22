@@ -559,7 +559,9 @@ export default function PitchPage() {
         <div className="business-text">
           • <strong>Media Conglomerates:</strong> Disney, NBCUniversal, ViacomCBS seeking tech-focused content<br/>
           • <strong>Streaming Platforms:</strong> Netflix, Amazon, Apple expanding original programming<br/>
-          • <strong>Tech Companies:</strong> Google, Microsoft exploring education/entertainment crossover<br/>
+          • <strong>Tech Companies:</strong> Google, Microsoft, META exploring education/entertainment crossover<br/>
+          • <strong>AI Companies:</strong> Xai advancing tech education and creator development<br/>
+          • <strong>Startup Accelerators:</strong> Y Combinator expanding into media and creator economy<br/>
           • <strong>Production Companies:</strong> Endemol Shine, Fremantle building reality TV portfolios
         </div>
 
