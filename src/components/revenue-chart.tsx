@@ -84,8 +84,9 @@ const options = {
         size: 11,
       },
       callbacks: {
-        label: function(context: any) {
-          return `${context.dataset.label}: $${context.parsed.y.toLocaleString()}`
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        label: function(tooltipItem: any) {
+          return `${tooltipItem.dataset.label || ''}: $${tooltipItem.parsed.y.toLocaleString()}`
         }
       }
     },
@@ -99,8 +100,9 @@ const options = {
           size: 11,
         },
         color: '#374151',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         callback: function(value: any) {
-          return '$' + (value / 1000000).toFixed(1) + 'M'
+          return '$' + (Number(value) / 1000000).toFixed(1) + 'M'
         }
       },
       grid: {

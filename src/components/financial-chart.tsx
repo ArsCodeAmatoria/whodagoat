@@ -79,6 +79,7 @@ const options = {
         size: 11,
       },
       callbacks: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         label: function(context: any) {
           return `${context.dataset.label}: $${(context.parsed.y / 1000000).toFixed(1)}M`
         }
@@ -94,6 +95,7 @@ const options = {
           size: 11,
         },
         color: '#374151',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         callback: function(value: any) {
           return '$' + (value / 1000000).toFixed(0) + 'M'
         }
