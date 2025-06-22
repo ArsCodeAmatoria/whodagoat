@@ -39,6 +39,23 @@ export default function Home() {
           • PRODUCTION TIMELINE: 26 weeks (6 months total)
         </div>
 
+        {/* Narrator */}
+        <div className="screenplay-heading">
+          NARRATOR
+        </div>
+        <div className="screenplay-action">
+          The young ones come to Los Angeles with their laptops and their dreams. They code in coffee shops and sleep on couches and believe they will change the world. Most will not. But some will.
+        </div>
+        <div className="screenplay-action">
+          This is their story. Twelve of them. The best and the brightest and the hungriest. They will live together and work together and compete against each other until only one remains. The cameras will watch. The audience will judge. The code will not lie.
+        </div>
+        <div className="screenplay-action">
+          There is no mercy in silicon. There is no kindness in algorithms. There is only what works and what does not work. The young ones know this. They have always known this. Now they must prove it.
+        </div>
+        <div className="screenplay-action">
+          In the end, one will stand alone. One will be the greatest. One will be the GOAT.
+        </div>
+
         {/* Concept Overview */}
         <div className="screenplay-heading">
           CONCEPT OVERVIEW
