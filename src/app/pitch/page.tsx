@@ -1,8 +1,70 @@
 import React from "react";
+import Link from "next/link";
 
 export default function PitchPage() {
   return (
     <div className="screenplay">
+      {/* Navigation Header */}
+      <header className="mb-12 pb-8 border-b-2 border-black">
+        <div className="text-center mb-6">
+          <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: 'Courier New, monospace' }}>
+            WHO&apos;S THE GOAT?
+          </h1>
+          <p className="text-lg text-gray-600 mb-4">
+            A reality competition series pitch for the next generation of tech creators
+          </p>
+        </div>
+        
+        {/* Navigation Links */}
+        <nav className="flex justify-center gap-8 mb-6">
+          <Link 
+            href="/" 
+            className="px-4 py-2 border-2 border-black text-black hover:bg-black hover:text-white transition-colors font-bold text-sm uppercase tracking-wide"
+          >
+            Treatment Document
+          </Link>
+          <Link 
+            href="/pitch" 
+            className="px-4 py-2 bg-black text-white font-bold text-sm uppercase tracking-wide"
+          >
+            Business Plan
+          </Link>
+        </nav>
+
+        {/* Key Metrics Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+          <div>
+            <div className="font-bold">REVENUE</div>
+            <div className="text-green-600">$13.8M</div>
+          </div>
+          <div>
+            <div className="font-bold">PROFIT</div>
+            <div className="text-green-600">$7.8M</div>
+          </div>
+          <div>
+            <div className="font-bold">MARGIN</div>
+            <div className="text-green-600">56%</div>
+          </div>
+          <div>
+            <div className="font-bold">FUNDING</div>
+            <div className="text-blue-600">$10M</div>
+          </div>
+        </div>
+
+        {/* Status Tags */}
+        <div className="flex justify-center gap-2 mt-6 flex-wrap">
+          <span className="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+            Ready for Production
+          </span>
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+            Seeking Investment
+          </span>
+          <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">
+            Series A Funding
+          </span>
+        </div>
+      </header>
+
       {/* Title Page */}
       <div className="screenplay-title">
         &ldquo;WHO&apos;S THE GOAT?&rdquo;
@@ -590,14 +652,14 @@ export default function PitchPage() {
         For additional information, including detailed financial models, production schedules, and partnership agreements, please contact:
       </div>
       <div className="business-text">
-        Email: investors@whosthegoat.tv<br/>
+        Email: <a href="mailto:investors@whosthegoat.tv" className="text-blue-600 underline">investors@whosthegoat.tv</a><br/>
         Phone: [Phone Number]<br/>
         Location: Los Angeles, California<br/>
         Status: Series A Funding Round Open
       </div>
 
       <div className="business-text">
-        <strong>CONFIDENTIALITY NOTICE:</strong> This business plan contains proprietary and confidential information. Any reproduction or distribution is strictly prohibited without written consent.
+        <strong className="text-red-600">CONFIDENTIALITY NOTICE:</strong> This business plan contains proprietary and confidential information. Any reproduction or distribution is strictly prohibited without written consent.
       </div>
 
       <div className="screenplay-transition">

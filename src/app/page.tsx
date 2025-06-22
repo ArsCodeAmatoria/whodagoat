@@ -1,8 +1,73 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="screenplay">
+      {/* Navigation Header */}
+      <header className="mb-12 pb-8 border-b-2 border-black">
+        <div className="text-center mb-6">
+          <h1 className="text-4xl font-bold mb-2" style={{ fontFamily: 'Courier New, monospace' }}>
+            WHO&apos;S THE GOAT?
+          </h1>
+          <p className="text-lg text-gray-600 mb-4">
+            A reality competition series pitch for the next generation of tech creators
+          </p>
+        </div>
+        
+        {/* Navigation Links */}
+        <nav className="flex justify-center gap-8 mb-6">
+          <Link 
+            href="/" 
+            className="px-4 py-2 bg-black text-white font-bold text-sm uppercase tracking-wide"
+          >
+            Treatment Document
+          </Link>
+          <Link 
+            href="/pitch" 
+            className="px-4 py-2 border-2 border-black text-black hover:bg-black hover:text-white transition-colors font-bold text-sm uppercase tracking-wide"
+          >
+            Business Plan
+          </Link>
+        </nav>
+
+        {/* Key Info Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+          <div>
+            <div className="font-bold">FORMAT</div>
+            <div>12 episodes, 60 min</div>
+          </div>
+          <div>
+            <div className="font-bold">CONTESTANTS</div>
+            <div>12 tech creators</div>
+          </div>
+          <div>
+            <div className="font-bold">GRAND PRIZE</div>
+            <div>$100,000</div>
+          </div>
+          <div>
+            <div className="font-bold">BUDGET</div>
+            <div>$6M production</div>
+          </div>
+        </div>
+
+        {/* Categories */}
+        <div className="flex justify-center gap-2 mt-6 flex-wrap">
+          <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+            Reality TV
+          </span>
+          <span className="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+            Technology
+          </span>
+          <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">
+            Competition
+          </span>
+          <span className="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">
+            Education
+          </span>
+        </div>
+      </header>
+
       {/* Title Page */}
       <div className="screenplay-title">
         &ldquo;WHO&apos;S THE GOAT?&rdquo;
@@ -229,6 +294,17 @@ export default function Home() {
         • The title: Greatest of All Tech
       </div>
 
+      {/* Project Status */}
+      <div className="screenplay-heading">
+        PROJECT STATUS
+      </div>
+      <div className="screenplay-action">
+        <strong>PRODUCTION READINESS:</strong> All systems go for immediate production start<br/>
+        <strong>INVESTMENT STATUS:</strong> Seeking $10M Series A funding<br/>
+        <strong>CASTING PREPARATION:</strong> Strategy complete, ready to launch<br/>
+        <strong>LOCATION:</strong> Los Angeles, California
+      </div>
+
       {/* Contact */}
       <div className="screenplay-heading">
         CONTACT
@@ -237,9 +313,12 @@ export default function Home() {
         For more information about &ldquo;WHO&apos;S THE GOAT?&rdquo; including full business plan, casting strategy, and production timeline, contact:
       </div>
       <div className="screenplay-action">
-        Email: info@whosthegoat.tv<br/>
+        Email: <a href="mailto:info@whosthegoat.tv" className="text-blue-600 underline">info@whosthegoat.tv</a><br/>
         Location: Los Angeles, California<br/>
         Status: Ready for Production
+      </div>
+      <div className="screenplay-action">
+        <strong className="text-red-600">CONFIDENTIAL DOCUMENT</strong>
       </div>
 
       <div className="screenplay-transition">
