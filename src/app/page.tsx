@@ -1,14 +1,14 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Play, Users, Trophy, Code, Tv, DollarSign, Target } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Play, Users, Trophy, Code, Tv, DollarSign, Target, Calendar } from "lucide-react";
 
 export default function ConceptPage() {
   return (
     <div className="docs-content">
       {/* Header */}
       <div className="mb-12">
-        <h1 className="docs-title">Who's the GOAT?</h1>
+        <h1 className="docs-title">Who&apos;s the GOAT?</h1>
         <p className="text-xl text-muted-foreground mb-6 italic">
           The Ultimate Reality-Tech Show
         </p>
@@ -38,7 +38,7 @@ export default function ConceptPage() {
       <div className="docs-section">
         <h2 className="docs-subtitle">Concept Overview</h2>
         <p>
-          <em>"Who's the GOAT?"</em> is a high-stakes reality series where innovation meets entertainment. 
+          &ldquo;Who&apos;s the GOAT?&rdquo; is a high-stakes reality series where innovation meets entertainment. 
           Each episode features new challenges centered around building apps, pitching ideas, and surviving eliminations. 
           Contestants are judged on creativity, teamwork, code, and charisma.
         </p>

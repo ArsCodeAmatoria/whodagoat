@@ -5,6 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { File, Users, Cog, TrendingUp, Megaphone, Presentation } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FileText, BarChart3, Calendar, Target, DollarSign } from "lucide-react";
 
 const navigation = [
   {
@@ -31,65 +34,101 @@ const navigation = [
   },
 ];
 
+interface NavItem {
+  title: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  description: string;
+}
+
+const navItems: NavItem[] = [
+  {
+    title: "Overview",
+    href: "/",
+    icon: FileText,
+    description: "Show concept and format"
+  },
+  {
+    title: "Investment Pitch",
+    href: "/pitch",
+    icon: DollarSign,
+    description: "Business case and financials"
+  }
+];
+
 export function DocsSidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="w-64 h-screen sticky top-0 border-r border-border bg-background/95 backdrop-blur">
+    <div className="w-80 bg-card border-r border-border h-screen overflow-y-auto sidebar-scroll">
       <div className="p-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 mb-8">
-          <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
-            <span className="text-white font-bold text-sm">G</span>
-          </div>
-          <span className="text-xl font-bold">Who's the GOAT?</span>
-        </Link>
+        {/* Logo/Title */}
+        <div className="mb-8">
+          <h1 className="script-title text-2xl mb-2">Who&apos;s the GOAT?</h1>
+          <p className="text-sm text-muted-foreground">
+            The Ultimate Reality-Tech Show
+          </p>
+        </div>
 
         {/* Navigation */}
-        <nav className="space-y-8">
-          {navigation.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                {section.title}
-              </h4>
-              <ul className="space-y-1">
-                {section.items.map((item) => {
-                  const Icon = item.icon;
-                  const isActive = pathname === item.href;
-                  return (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className={cn(
-                          "flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors",
-                          isActive
-                            ? "bg-primary text-primary-foreground"
-                            : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                        )}
-                      >
-                        <Icon className="w-4 h-4" />
-                        <span>{item.title}</span>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
+        <nav className="space-y-2">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = pathname === item.href;
+            
+            return (
+              <Link key={item.href} href={item.href}>
+                <Button
+                  variant={isActive ? "default" : "ghost"}
+                  className="w-full justify-start h-auto p-3"
+                >
+                  <Icon className="mr-3 h-4 w-4 flex-shrink-0" />
+                  <div className="text-left">
+                    <div className="font-medium">{item.title}</div>
+                    <div className="text-xs opacity-70">{item.description}</div>
+                  </div>
+                </Button>
+              </Link>
+            );
+          })}
         </nav>
 
-        {/* CTA at bottom */}
-        <div className="mt-12 p-4 bg-muted rounded-lg">
-          <h4 className="font-semibold mb-2">Ready to Pitch?</h4>
-          <p className="text-sm text-muted-foreground mb-3">
-            Contact us to discuss this revolutionary show concept.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Get in Touch
-          </Link>
+        {/* Quick Stats Card */}
+        <Card className="mt-8">
+          <CardContent className="p-4">
+            <h3 className="font-semibold mb-3 text-sm">Quick Stats</h3>
+            <div className="space-y-2 text-xs">
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Contestants</span>
+                <span className="font-medium">12</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Episodes</span>
+                <span className="font-medium">12</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Grand Prize</span>
+                <span className="font-medium">$100K</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Production Budget</span>
+                <span className="font-medium">$6M</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Projected Revenue</span>
+                <span className="font-medium">$13.8M</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Contact Info */}
+        <div className="mt-8 p-4 bg-muted/50 rounded-lg">
+          <h3 className="font-semibold mb-2 text-sm">Contact</h3>
+          <div className="space-y-1 text-xs text-muted-foreground">
+            <p>info@whosthegoat.tv</p>
+            <p>Los Angeles, CA</p>
+          </div>
         </div>
       </div>
     </div>
