@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Dancing_Script } from "next/font/google";
+import { Inter, Mr_Dafoe } from "next/font/google";
 import "./globals.css";
 import { DocsSidebar } from "@/components/docs-sidebar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const dancingScript = Dancing_Script({ subsets: ["latin"], variable: "--font-script" });
+const mrDafoe = Mr_Dafoe({ 
+  weight: "400",
+  subsets: ["latin"], 
+  variable: "--font-script" 
+});
 
 export const metadata: Metadata = {
   title: "Who's the GOAT? - The Ultimate Reality-Tech Show",
@@ -32,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${dancingScript.variable} antialiased`}>
+      <body className={`${inter.variable} ${mrDafoe.variable} antialiased`}>
         <div className="flex min-h-screen">
           <DocsSidebar />
           <main className="flex-1 overflow-y-auto">
