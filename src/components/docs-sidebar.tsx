@@ -26,7 +26,7 @@ export function DocsSidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="sidebar w-80 h-screen overflow-y-auto">
+    <div className="sidebar w-80 h-screen overflow-y-auto border-l-2 border-black">
       <div className="p-6">
         {/* Title */}
         <div className="mb-8 text-center border-b-2 border-black pb-4">
@@ -51,7 +51,7 @@ export function DocsSidebar() {
             
             return (
               <Link key={item.href} href={item.href}>
-                <div className={`p-3 border ${isActive ? 'bg-black text-white' : 'bg-white text-black hover:bg-gray-100'} cursor-pointer`}>
+                <div className={`p-3 border ${isActive ? 'bg-black text-white' : 'bg-white text-black hover:bg-gray-100'} cursor-pointer transition-colors`}>
                   <div className="font-bold text-xs uppercase tracking-wider">{item.title}</div>
                   <div className="text-xs mt-1">{item.description}</div>
                 </div>

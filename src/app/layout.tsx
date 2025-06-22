@@ -33,12 +33,12 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} antialiased`}>
         <div className="flex min-h-screen bg-white">
-          <DocsSidebar />
           <main className="flex-1 overflow-y-auto">
-            <div className="container mx-auto px-12 py-16 max-w-5xl">
+            <div className="container mx-auto px-12 py-16 max-w-6xl">
               {children}
             </div>
           </main>
+          <DocsSidebar />
         </div>
       </body>
     </html>
