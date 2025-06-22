@@ -1,130 +1,118 @@
-"use client";
+import React from 'react';
+import Link from 'next/link';
+import { FileText, DollarSign, Users, Calendar, Target, Trophy } from 'lucide-react';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-interface NavItem {
-  title: string;
-  href: string;
-  description: string;
-}
-
-const navItems: NavItem[] = [
-  {
-    title: "TREATMENT",
-    href: "/",
-    description: "Series Overview & Format"
-  },
-  {
-    title: "BUSINESS PLAN",
-    href: "/pitch",
-    description: "Financial Projections & Investment"
-  }
-];
-
-export function DocsSidebar() {
-  const pathname = usePathname();
-
+export default function DocsSidebar() {
   return (
-    <div className="sidebar w-80 h-screen overflow-y-auto border-l-2 border-black">
-      <div className="p-6">
-        {/* Title */}
-        <div className="mb-8 text-center border-b-2 border-black pb-4">
-          <div className="sidebar-title">
-            "WHO'S THE GOAT?"
-          </div>
-          <div className="text-xs uppercase tracking-wider">
-            REALITY COMPETITION SERIES
-          </div>
-          <div className="text-xs mt-2">
-            CONFIDENTIAL TREATMENT
+    <div className="w-64 bg-gray-50 border-l border-gray-200 sticky top-0 h-screen overflow-y-auto">
+      <div className="p-4">
+        {/* Header */}
+        <div className="mb-6">
+          <h2 className="text-lg font-bold text-black mb-1" style={{ fontFamily: 'Courier New, monospace' }}>
+            WHO&apos;S THE GOAT?
+          </h2>
+          <p className="text-xs text-gray-600 uppercase tracking-wide">
+            REALITY TV PITCH
+          </p>
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="space-y-2 mb-6">
+          <Link 
+            href="/" 
+            className="flex items-center gap-3 w-full p-3 text-left bg-white border border-gray-200 hover:bg-gray-100 transition-colors rounded"
+          >
+            <FileText size={16} className="text-gray-600" />
+            <div>
+              <div className="text-sm font-medium text-black">Treatment</div>
+              <div className="text-xs text-gray-500">Show concept & format</div>
+            </div>
+          </Link>
+          
+          <Link 
+            href="/pitch" 
+            className="flex items-center gap-3 w-full p-3 text-left bg-white border border-gray-200 hover:bg-gray-100 transition-colors rounded"
+          >
+            <DollarSign size={16} className="text-gray-600" />
+            <div>
+              <div className="text-sm font-medium text-black">Business Plan</div>
+              <div className="text-xs text-gray-500">Investment & financials</div>
+            </div>
+          </Link>
+        </div>
+
+        {/* Quick Stats */}
+        <div className="bg-white border border-gray-200 rounded p-3 mb-6">
+          <h3 className="text-sm font-bold text-black mb-3 uppercase tracking-wide">
+            Quick Stats
+          </h3>
+          <div className="space-y-2 text-xs">
+            <div className="flex items-center gap-2">
+              <Users size={12} className="text-gray-500" />
+              <span className="text-gray-700">12 contestants</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Calendar size={12} className="text-gray-500" />
+              <span className="text-gray-700">12 episodes</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Target size={12} className="text-gray-500" />
+              <span className="text-gray-700">$6M budget</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Trophy size={12} className="text-gray-500" />
+              <span className="text-gray-700">$100K prize</span>
+            </div>
           </div>
         </div>
 
-        {/* Navigation */}
-        <nav className="sidebar-nav space-y-1 mb-8">
-          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
-            DOCUMENTS
-          </div>
-          {navItems.map((item) => {
-            const isActive = pathname === item.href;
-            
-            return (
-              <Link key={item.href} href={item.href}>
-                <div className={`p-3 border ${isActive ? 'bg-black text-white' : 'bg-white text-black hover:bg-gray-100'} cursor-pointer transition-colors`}>
-                  <div className="font-bold text-xs uppercase tracking-wider">{item.title}</div>
-                  <div className="text-xs mt-1">{item.description}</div>
-                </div>
-              </Link>
-            );
-          })}
-        </nav>
-
-        {/* Production Details */}
-        <div className="border border-black p-4 mb-6">
-          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
-            PRODUCTION DETAILS
-          </div>
+        {/* Key Metrics */}
+        <div className="bg-white border border-gray-200 rounded p-3 mb-6">
+          <h3 className="text-sm font-bold text-black mb-3 uppercase tracking-wide">
+            Financials
+          </h3>
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
-              <span>FORMAT:</span>
-              <span>12 x 60 MIN</span>
+              <span className="text-gray-600">Revenue:</span>
+              <span className="font-medium text-green-700">$13.8M</span>
             </div>
             <div className="flex justify-between">
-              <span>CONTESTANTS:</span>
-              <span>12</span>
+              <span className="text-gray-600">Profit:</span>
+              <span className="font-medium text-green-700">$7.8M</span>
             </div>
             <div className="flex justify-between">
-              <span>GRAND PRIZE:</span>
-              <span>$100,000</span>
+              <span className="text-gray-600">Margin:</span>
+              <span className="font-medium text-green-700">56%</span>
             </div>
             <div className="flex justify-between">
-              <span>BUDGET:</span>
-              <span>$6M</span>
-            </div>
-            <div className="flex justify-between">
-              <span>REVENUE:</span>
-              <span>$13.8M</span>
-            </div>
-            <div className="flex justify-between border-t border-black pt-2 font-bold">
-              <span>PROFIT MARGIN:</span>
-              <span>56%</span>
+              <span className="text-gray-600">ROI:</span>
+              <span className="font-medium text-green-700">150%</span>
             </div>
           </div>
         </div>
 
         {/* Status */}
-        <div className="border border-black p-4 mb-6">
-          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
-            PROJECT STATUS
-          </div>
-          <div className="text-xs space-y-1">
-            <div>STATUS: READY FOR PRODUCTION</div>
-            <div>CREATED: 2024</div>
-            <div>LOCATION: LOS ANGELES, CA</div>
-            <div>GENRE: REALITY COMPETITION</div>
-            <div>TARGET: STREAMING/CABLE</div>
+        <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-6">
+          <h3 className="text-sm font-bold text-blue-900 mb-2 uppercase tracking-wide">
+            Status
+          </h3>
+          <div className="text-xs text-blue-800">
+            <div className="mb-1">✓ Ready for production</div>
+            <div className="mb-1">✓ Casting strategy complete</div>
+            <div className="mb-1">✓ Budget finalized</div>
+            <div>✓ Seeking $10M funding</div>
           </div>
         </div>
 
         {/* Contact */}
-        <div className="border border-black p-4">
-          <div className="text-xs uppercase font-bold tracking-wider border-b border-black pb-1 mb-3">
-            CONTACT INFORMATION
-          </div>
-          <div className="text-xs space-y-1">
-            <div>EMAIL: INFO@WHOSTHEGOAT.TV</div>
-            <div>LOCATION: LOS ANGELES, CA</div>
-            <div>AVAILABILITY: IMMEDIATE</div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="mt-6 text-center text-xs">
-          <div className="border-t border-black pt-3">
-            © 2024 WHO'S THE GOAT?<br/>
-            ALL RIGHTS RESERVED<br/>
-            CONFIDENTIAL MATERIAL
+        <div className="bg-gray-100 border border-gray-200 rounded p-3">
+          <h3 className="text-sm font-bold text-black mb-2 uppercase tracking-wide">
+            Contact
+          </h3>
+          <div className="text-xs text-gray-700 space-y-1">
+            <div>info@whosthegoat.tv</div>
+            <div>Los Angeles, CA</div>
+            <div className="text-red-600 font-medium">CONFIDENTIAL</div>
           </div>
         </div>
       </div>

@@ -1,14 +1,11 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Play, Users, Trophy, Code, Tv, DollarSign, Target, Calendar } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="screenplay">
       {/* Title Page */}
       <div className="screenplay-title">
-        "WHO'S THE GOAT?"
+        &ldquo;WHO&apos;S THE GOAT?&rdquo;
       </div>
       <div className="screenplay-subtitle">
         A Reality Competition Series Treatment
@@ -44,10 +41,10 @@ export default function Home() {
         CONCEPT OVERVIEW
       </div>
       <div className="screenplay-action">
-        In a world where technical skills determine career success, "WHO'S THE GOAT?" takes twelve ambitious creators and puts them through the ultimate test. Each week brings new challenges that push contestants beyond their comfort zones—from building mobile apps under extreme time pressure to pitching their ideas to industry titans.
+        In a world where technical skills determine career success, &ldquo;WHO&apos;S THE GOAT?&rdquo; takes twelve ambitious creators and puts them through the ultimate test. Each week brings new challenges that push contestants beyond their comfort zones—from building mobile apps under extreme time pressure to pitching their ideas to industry titans.
       </div>
       <div className="screenplay-action">
-        But this isn't just about code. It's about character. Cameras capture every breakdown, every breakthrough, and every betrayal as contestants navigate both technical challenges and complex social dynamics. Alliances form and crumble. Romances bloom and wither. And through it all, one question drives the competition: Who has what it takes to be the Greatest of All Tech?
+        But this isn&apos;t just about code. It&apos;s about character. Cameras capture every breakdown, every breakthrough, and every betrayal as contestants navigate both technical challenges and complex social dynamics. Alliances form and crumble. Romances bloom and wither. And through it all, one question drives the competition: Who has what it takes to be the Greatest of All Tech?
       </div>
 
       {/* The Arena */}
@@ -80,7 +77,7 @@ export default function Home() {
         <strong>MAIN CHALLENGE (Day 3-5):</strong> Complex project requiring multiple skills—coding, design, user testing, presentation. May be individual or team-based.
       </div>
       <div className="screenplay-action">
-        <strong>JUDGING & ELIMINATION (Day 6):</strong> Contestants present their work. Bottom performers face "The Debug"—a high-pressure technical interview. One contestant eliminated.
+        <strong>JUDGING & ELIMINATION (Day 6):</strong> Contestants present their work. Bottom performers face &ldquo;The Debug&rdquo;—a high-pressure technical interview. One contestant eliminated.
       </div>
       <div className="screenplay-action">
         <strong>SOCIAL DYNAMICS (Throughout):</strong> 24/7 filming captures alliances, conflicts, and personal relationships that influence competition strategy.
@@ -179,7 +176,7 @@ export default function Home() {
         WHY NOW?
       </div>
       <div className="screenplay-action">
-        The convergence of several cultural and economic factors makes this the perfect moment for "WHO'S THE GOAT?":
+        The convergence of several cultural and economic factors makes this the perfect moment for &ldquo;WHO&apos;S THE GOAT?&rdquo;:
       </div>
       <div className="screenplay-action">
         <strong>TECH SKILLS CRISIS:</strong> 4.4 million unfilled tech jobs in the U.S. create massive audience interest in tech careers.
@@ -199,7 +196,7 @@ export default function Home() {
         THE HOOK
       </div>
       <div className="screenplay-action">
-        "WHO'S THE GOAT?" isn't just entertainment—it's education disguised as competition. Viewers don't just watch; they learn. Each episode includes:
+        &ldquo;WHO&apos;S THE GOAT?&rdquo; isn&apos;t just entertainment—it&apos;s education disguised as competition. Viewers don&apos;t just watch; they learn. Each episode includes:
       </div>
       <div className="screenplay-action">
         • SKILL SPOTLIGHTS: Brief segments explaining technical concepts<br/>
@@ -237,7 +234,7 @@ export default function Home() {
         CONTACT
       </div>
       <div className="screenplay-action">
-        For more information about "WHO'S THE GOAT?" including full business plan, casting strategy, and production timeline, contact:
+        For more information about &ldquo;WHO&apos;S THE GOAT?&rdquo; including full business plan, casting strategy, and production timeline, contact:
       </div>
       <div className="screenplay-action">
         Email: info@whosthegoat.tv<br/>
