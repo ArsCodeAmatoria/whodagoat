@@ -20,7 +20,7 @@ export default function RootLayout({
         {/* Left Side Footer with Vertical Text - hidden on mobile, visible on desktop */}
         <div 
           className="hidden lg:flex fixed left-0 top-0 bottom-0 w-8 items-center justify-center bg-gray-50"
-          style={{ zIndex: 50 }}
+          style={{ zIndex: 40 }}
         >
           <div 
             className="text-gray-400 tracking-widest"
@@ -38,9 +38,9 @@ export default function RootLayout({
         </div>
 
         <div className="min-h-screen">
-          {/* Main Content with responsive spacing that accounts for sidebars */}
-          <div className="pr-4 sm:pr-6 lg:pr-[320px] pl-4 sm:pl-6 lg:pl-12">
-            <main className="py-8 mx-auto" style={{ maxWidth: 'none' }}>
+          {/* Main Content - no fixed padding, works with slide-out sidebar */}
+          <div className="px-4 sm:px-6 lg:pl-12">
+            <main className="py-8 mx-auto max-w-4xl">
               {children}
             </main>
           </div>
