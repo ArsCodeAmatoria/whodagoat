@@ -8,6 +8,13 @@ export default function Home() {
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50 backdrop-blur-sm bg-white/95">
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-xl font-semibold tracking-tight">WHO&apos;S THE GOAT?</div>
+          <nav className="hidden md:flex space-x-6 text-sm">
+            <a href="#opportunity" className="text-gray-600 hover:text-gray-900 transition-colors">Opportunity</a>
+            <a href="#solution" className="text-gray-600 hover:text-gray-900 transition-colors">Solution</a>
+            <a href="#market" className="text-gray-600 hover:text-gray-900 transition-colors">Market</a>
+            <a href="#financials" className="text-gray-600 hover:text-gray-900 transition-colors">Financials</a>
+            <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Contact</a>
+          </nav>
           <div className="text-sm text-gray-600 font-medium">CONFIDENTIAL</div>
         </div>
       </header>
@@ -26,11 +33,16 @@ export default function Home() {
             <p className="text-lg font-semibold text-blue-600">Seeking $10M Series A</p>
             <p className="text-sm text-gray-500 mt-6">Nine Productions • June 2025</p>
           </div>
+          <div className="mt-12">
+            <a href="#contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 inline-block font-medium">
+              Request Full Pitch Deck
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Executive Summary */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section id="opportunity" className="py-20 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-playfair font-medium mb-12 text-center text-gray-900">Executive Summary</h2>
           <div className="grid md:grid-cols-2 gap-16">
@@ -108,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Solution */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section id="solution" className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-playfair font-medium mb-12 text-center text-gray-900">The Solution</h2>
           <div className="text-center mb-16">
@@ -165,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* Market Size */}
-      <section className="py-20 px-6">
+      <section id="market" className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-playfair font-medium mb-12 text-center text-gray-900">Market Opportunity</h2>
           <div className="grid md:grid-cols-3 gap-8 text-center mb-16">
@@ -324,7 +336,7 @@ export default function Home() {
       </section>
 
       {/* Financial Projections */}
-      <section className="py-20 px-6">
+      <section id="financials" className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-playfair font-medium mb-12 text-center text-gray-900">5-Year Financial Projections</h2>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
@@ -491,21 +503,82 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-playfair font-medium mb-12 text-gray-900">Next Steps</h2>
-          <div className="bg-white p-12 rounded-xl shadow-lg border border-gray-200">
-            <p className="text-xl text-gray-800 mb-8 font-light">
-              Ready to invest in the future of reality television?
-            </p>
-            <div className="space-y-3 text-gray-700 mb-8">
-              <p className="text-lg font-semibold text-gray-900">Nine Productions</p>
-              <p className="text-gray-600">Los Angeles, California</p>
-              <p className="text-blue-600 font-medium">info@nineproductions.com</p>
+      {/* Contact Form */}
+      <section id="contact" className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-playfair font-medium mb-12 text-center text-gray-900">Get the Full Pitch Deck</h2>
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+              <h3 className="text-xl font-semibold mb-6 text-gray-900">Contact Information</h3>
+              <div className="space-y-4 text-gray-700 mb-8">
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span className="font-medium">Nine Productions</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <span>Los Angeles, California</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  <a href="mailto:info@nineproductions.com" className="text-blue-600 hover:text-blue-700 transition-colors">info@nineproductions.com</a>
+                </div>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                <p className="text-blue-900 font-semibold text-center">Series A: $10M</p>
+                <p className="text-blue-800 text-center mt-1">Pre-money valuation: $40M</p>
+              </div>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg border border-blue-200 inline-block">
-              <p className="text-blue-900 font-semibold">Series A: $10M • Pre-money valuation: $40M</p>
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+              <h3 className="text-xl font-semibold mb-6 text-gray-900">Request Full Materials</h3>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                  <input 
+                    type="text" 
+                    id="company" 
+                    name="company" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="Investment firm or company"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="Tell us about your investment interests..."
+                  ></textarea>
+                </div>
+                <button 
+                  type="submit" 
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 font-medium"
+                >
+                  Request Full Pitch Deck
+                </button>
+              </form>
             </div>
           </div>
         </div>
