@@ -57,8 +57,8 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
       fontFamily: {
-        'display': ['var(--font-display)', 'system-ui', 'sans-serif'],
-        'body': ['var(--font-body)', 'system-ui', 'sans-serif'],
+        'sans': ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        'playfair': ['var(--font-playfair)', 'Playfair Display', 'serif'],
       },
       fontSize: {
         'display-xl': ['clamp(3rem, 8vw, 8rem)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],
