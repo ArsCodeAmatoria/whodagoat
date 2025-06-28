@@ -17,30 +17,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-white`}>
-                {/* Sticky Left Side Footer with Vertical Text */}
+        {/* Left Side Footer with Vertical Text - responsive visibility */}
         <div 
-          className="fixed left-0 top-0 bottom-0 w-8 flex items-center justify-center bg-gray-50"
+          className="fixed left-0 top-0 bottom-0 w-8 lg:flex hidden items-center justify-center bg-gray-50"
           style={{ zIndex: 50, position: 'fixed' }}
         >
           <div 
             className="text-gray-400 tracking-widest"
-                          style={{
-                fontFamily: 'Courier New, monospace',
-                fontSize: '12px',
-                writingMode: 'vertical-rl',
-                textOrientation: 'mixed',
-                paddingTop: '3rem',
-                paddingBottom: '3rem'
-              }}
+            style={{
+              fontFamily: 'Courier New, monospace',
+              fontSize: '12px',
+              writingMode: 'vertical-rl',
+              textOrientation: 'mixed',
+              paddingTop: '3rem',
+              paddingBottom: '3rem'
+            }}
           >
             WHO&apos;S THE GOAT? • CONFIDENTIAL TREATMENT • NINE PRODUCTIONS • LOS ANGELES, CA
           </div>
         </div>
 
         <div className="min-h-screen">
-          {/* Main Content with proper spacing for fixed navigation box and left sidebar */}
-          <div className="pr-80 pl-12">
-            <main className="px-6 py-8 max-w-4xl mx-auto">
+          {/* Main Content with responsive spacing */}
+          <div className="px-4 sm:px-6 lg:pr-80 lg:pl-12">
+            <main className="py-8 max-w-4xl lg:mx-auto">
               {children}
             </main>
           </div>
