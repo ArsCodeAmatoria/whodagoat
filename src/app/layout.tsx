@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-
 export const metadata: Metadata = {
-  title: "Who's the GOAT? - Reality TV Pitch",
-  description: "A reality competition series where 12 young tech creators compete to prove they're the Greatest of All Tech.",
+  title: "Who's the GOAT? - Reality Tech Competition",
+  description: "The ultimate reality competition where 12 young tech creators battle to prove they're the Greatest of All Tech",
 };
 
 export default function RootLayout({
@@ -16,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased bg-white`}>
+      <body className="antialiased">
         {children}
       </body>
     </html>
