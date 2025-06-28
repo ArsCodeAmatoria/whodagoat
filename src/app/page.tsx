@@ -15,11 +15,11 @@ export default function Home() {
               <h1 className="mb-8 text-white">
                 WHO&apos;S THE <span className="text-gradient">GOAT?</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-4 font-light max-w-2xl mx-auto">
-                The Ultimate Tech Reality Competition
+              <p className="text-xl text-gray-300 mb-4 font-light max-w-3xl mx-auto">
+                The first reality competition where coding skills, startup vision, and raw determination collide
               </p>
               <div className="text-lg text-gradient-cyan font-semibold mb-12">
-                Seeking $10M Series A Investment
+                A Revolutionary Entertainment Experience
               </div>
             </div>
             
@@ -33,82 +33,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Market Metrics */}
+      {/* The Show Concept */}
       <section className="section-tech bg-gray-800/50">
         <div className="container-tech">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="stat-card">
-              <div className="stat-number">$2.6B</div>
-              <div className="text-gray-400 font-medium text-sm">Reality TV Market</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">68M</div>
-              <div className="text-gray-400 font-medium text-sm">Gen Z Viewers</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">$13.8M</div>
-              <div className="text-gray-400 font-medium text-sm">Projected Revenue</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">56%</div>
-              <div className="text-gray-400 font-medium text-sm">Gross Margin</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Executive Summary */}
-      <section className="section-tech">
-        <div className="container-tech">
           <div className="text-center mb-16">
-            <h2 className="text-gradient mb-6">Executive Summary</h2>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              12 young tech creators compete in high-stakes coding challenges and startup pitches, 
-              living together in a cutting-edge tech house for the ultimate $100K prize.
+            <h2 className="text-gradient mb-8">The Show That Silicon Valley Has Been Waiting For</h2>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Imagine if you combined the strategic gameplay of Survivor, the high-stakes drama of The Bachelor, 
+              and the innovation of Shark Tank – but set it in a cutting-edge tech house where America's brightest 
+              young minds compete to prove they're the Greatest of All Time.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="card-tech">
-              <h3 className="text-gradient-cyan mb-6">The Opportunity</h3>
+              <h3 className="text-gradient-cyan mb-6">Real Stakes, Real Skills</h3>
               <div className="space-y-4">
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">$2.6B annual reality TV market with zero tech-focused competition</span>
+                  <span className="text-gray-300">Live coding challenges where contestants build actual apps under pressure</span>
                 </div>
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">4.4M unfilled tech jobs creating massive audience demand</span>
+                  <span className="text-gray-300">Startup pitch competitions judged by real Silicon Valley investors</span>
                 </div>
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">68M Gen Z viewers seeking authentic tech content</span>
+                  <span className="text-gray-300">24/7 cameras capturing the authentic struggles of young entrepreneurs</span>
                 </div>
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">Perfect timing for educational entertainment convergence</span>
+                  <span className="text-gray-300">Strategic alliances and eliminations that mirror real startup dynamics</span>
                 </div>
               </div>
             </div>
 
             <div className="card-tech">
-              <h3 className="text-gradient mb-6">The Business</h3>
+              <h3 className="text-gradient mb-6">Unprecedented Access</h3>
               <div className="space-y-4">
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">12-episode premium series with streaming distribution</span>
+                  <span className="text-gray-300">Industry legends mentor contestants in exclusive one-on-one sessions</span>
                 </div>
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">$6M production budget for Season 1</span>
+                  <span className="text-gray-300">Behind-the-scenes look at how billion-dollar ideas are actually born</span>
                 </div>
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">$13.8M projected revenue with 56% margins</span>
+                  <span className="text-gray-300">Real venture capital funding opportunities for winning concepts</span>
                 </div>
                 <div className="tech-list-item">
                   <div className="tech-dot"></div>
-                  <span className="text-gray-300">Scalable format for international markets</span>
+                  <span className="text-gray-300">The most authentic portrayal of tech culture ever captured on television</span>
                 </div>
               </div>
             </div>
@@ -116,93 +93,135 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The Concept */}
-      <section className="section-tech bg-gray-800/30">
+      {/* Why Now */}
+      <section className="section-tech">
         <div className="container-tech">
           <div className="text-center mb-16">
-            <h2 className="text-gradient-cyan mb-6">The Concept</h2>
+            <h2 className="text-gradient mb-6">Why This Show Will Dominate</h2>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              We're at the perfect cultural moment where technology isn't just changing the world – it IS the world. 
+              Young audiences are hungry for authentic content that reflects their digital-first reality.
+            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
             <div className="card-tech text-center">
-              <div className="tech-icon">⚡</div>
-              <h3 className="text-gradient mb-4">Real Challenges</h3>
+              <h3 className="text-gradient mb-4">Cultural Zeitgeist</h3>
               <p className="text-gray-400 leading-relaxed">
-                Live coding under pressure, startup pitch competitions, and authentic tech industry simulations.
+                Every young person today dreams of being the next Zuckerberg or building the next TikTok. 
+                This show captures that universal aspiration in a compelling, binge-worthy format.
               </p>
             </div>
             
             <div className="card-tech text-center">
-              <div className="tech-icon">🏆</div>
-              <h3 className="text-gradient mb-4">High Stakes</h3>
+              <h3 className="text-gradient mb-4">Educational Entertainment</h3>
               <p className="text-gray-400 leading-relaxed">
-                $100,000 grand prize, Silicon Valley mentorship opportunities, and career-launching connections.
+                Viewers don't just watch – they learn. From coding fundamentals to startup strategy, 
+                audiences gain valuable skills while being thoroughly entertained.
               </p>
             </div>
             
             <div className="card-tech text-center">
-              <div className="tech-icon">🚀</div>
-              <h3 className="text-gradient mb-4">Gen Z Focus</h3>
+              <h3 className="text-gradient mb-4">Social Media Gold</h3>
               <p className="text-gray-400 leading-relaxed">
-                Social media integration, authentic personalities, and relatable tech struggles.
+                Built for the TikTok generation with moments designed to go viral. 
+                Coding failures, breakthrough innovations, and genuine human drama create endless shareable content.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Revenue Model */}
+      {/* The Format */}
+      <section className="section-tech bg-gray-800/30">
+        <div className="container-tech">
+          <div className="text-center mb-16">
+            <h2 className="text-gradient-cyan mb-6">A Format That's Never Been Done</h2>
+          </div>
+          
+          <div className="card-hero mb-12">
+            <h3 className="text-xl font-bold mb-6 text-white">The Tech House Experience</h3>
+            <p className="text-gray-300 leading-relaxed text-lg mb-8">
+              12 brilliant contestants aged 18-25 live together in a state-of-the-art tech house equipped with the latest hardware, 
+              software, and development tools. Every conversation, every breakthrough, every meltdown is captured as they compete 
+              in increasingly challenging rounds that test both their technical abilities and entrepreneurial instincts.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-gradient font-semibold mb-4">Weekly Challenge Structure</h4>
+                <div className="space-y-3 text-gray-300">
+                  <p><strong>Monday:</strong> New challenge announced by celebrity tech mentors</p>
+                  <p><strong>Tuesday-Thursday:</strong> Development and strategy sessions</p>
+                  <p><strong>Friday:</strong> Live demonstrations and peer evaluations</p>
+                  <p><strong>Saturday:</strong> Elimination ceremony with investor panel</p>
+                  <p><strong>Sunday:</strong> Personal stories and relationship dynamics</p>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="text-gradient font-semibold mb-4">Escalating Complexity</h4>
+                <div className="space-y-3 text-gray-300">
+                  <p><strong>Episodes 1-3:</strong> Individual coding challenges</p>
+                  <p><strong>Episodes 4-6:</strong> Team-based app development</p>
+                  <p><strong>Episodes 7-9:</strong> Startup pitch competitions</p>
+                  <p><strong>Episodes 10-11:</strong> Real market validation tests</p>
+                  <p><strong>Episode 12:</strong> Final presentation to top VCs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Prize */}
       <section className="section-tech">
         <div className="container-tech">
           <div className="text-center mb-16">
-            <h2 className="text-gradient mb-6">Revenue Model</h2>
+            <h2 className="text-gradient mb-6">More Than Money</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="card-hero">
-              <h3 className="text-xl font-bold mb-8 text-white">Revenue Streams</h3>
+            <div className="card-tech">
+              <h3 className="text-xl font-bold mb-6 text-gradient">The Winner Receives</h3>
               <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b border-gray-600">
-                  <span className="text-gray-300 font-medium">Streaming Rights</span>
-                  <span className="text-gradient-cyan font-bold text-lg">$6.5M</span>
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">$100,000 cash prize to fund their startup dreams</span>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-600">
-                  <span className="text-gray-300 font-medium">Advertising Revenue</span>
-                  <span className="text-gradient-cyan font-bold text-lg">$4.2M</span>
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">One-year mentorship with Silicon Valley legends</span>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-600">
-                  <span className="text-gray-300 font-medium">Sponsorships</span>
-                  <span className="text-gradient-cyan font-bold text-lg">$2.3M</span>
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">Guaranteed meetings with top-tier venture capital firms</span>
                 </div>
-                <div className="flex justify-between items-center py-3 border-b border-gray-600">
-                  <span className="text-gray-300 font-medium">Merchandise & Digital</span>
-                  <span className="text-gradient-cyan font-bold text-lg">$0.8M</span>
-                </div>
-                <div className="flex justify-between items-center py-4 mt-6 bg-blue-600/20 rounded-lg px-4">
-                  <span className="text-white font-bold">Total Revenue</span>
-                  <span className="text-gradient font-bold text-xl">$13.8M</span>
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">Platform to launch their startup idea to millions of viewers</span>
                 </div>
               </div>
             </div>
 
             <div className="card-tech">
-              <h3 className="text-xl font-bold mb-8 text-gradient">Key Metrics</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="stat-card">
-                  <div className="stat-number text-2xl mb-2">56%</div>
-                  <div className="text-gray-400 text-xs font-medium">Gross Margin</div>
+              <h3 className="text-xl font-bold mb-6 text-gradient-cyan">Every Contestant Wins</h3>
+              <div className="space-y-4">
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">Industry connections that typically take years to build</span>
                 </div>
-                <div className="stat-card">
-                  <div className="stat-number text-2xl mb-2">$7.8M</div>
-                  <div className="text-gray-400 text-xs font-medium">Net Profit</div>
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">Real-world experience that can't be taught in classrooms</span>
                 </div>
-                <div className="stat-card">
-                  <div className="stat-number text-2xl mb-2">12</div>
-                  <div className="text-gray-400 text-xs font-medium">Episodes</div>
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">National platform to showcase their talents and ideas</span>
                 </div>
-                <div className="stat-card">
-                  <div className="stat-number text-2xl mb-2">5M+</div>
-                  <div className="text-gray-400 text-xs font-medium">Target Viewers</div>
+                <div className="tech-list-item">
+                  <div className="tech-dot"></div>
+                  <span className="text-gray-300">Alumni network of future tech leaders and innovators</span>
                 </div>
               </div>
             </div>
@@ -210,62 +229,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Financial Projections */}
+      {/* The Business Case */}
       <section className="section-tech bg-gray-800/30">
         <div className="container-tech">
           <div className="text-center mb-16">
-            <h2 className="text-gradient-cyan mb-6">5-Year Financial Projections</h2>
+            <h2 className="text-gradient-cyan mb-6">Why This Investment Makes Sense</h2>
           </div>
           
-          <div className="card-tech overflow-x-auto">
-            <table className="table-tech">
-              <thead>
-                <tr>
-                  <th>Year</th>
-                  <th className="text-right">Revenue</th>
-                  <th className="text-right">Production Cost</th>
-                  <th className="text-right">Gross Profit</th>
-                  <th className="text-right">Margin</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="font-bold">2025</td>
-                  <td className="text-right text-gray-300">$13.8M</td>
-                  <td className="text-right text-gray-400">$6.0M</td>
-                  <td className="text-right font-bold text-blue-400">$7.8M</td>
-                  <td className="text-right font-bold text-blue-400">56%</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">2026</td>
-                  <td className="text-right text-gray-300">$18.5M</td>
-                  <td className="text-right text-gray-400">$7.2M</td>
-                  <td className="text-right font-bold text-blue-400">$11.3M</td>
-                  <td className="text-right font-bold text-blue-400">61%</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">2027</td>
-                  <td className="text-right text-gray-300">$24.1M</td>
-                  <td className="text-right text-gray-400">$8.6M</td>
-                  <td className="text-right font-bold text-blue-400">$15.5M</td>
-                  <td className="text-right font-bold text-blue-400">64%</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">2028</td>
-                  <td className="text-right text-gray-300">$31.3M</td>
-                  <td className="text-right text-gray-400">$10.2M</td>
-                  <td className="text-right font-bold text-blue-400">$21.1M</td>
-                  <td className="text-right font-bold text-blue-400">67%</td>
-                </tr>
-                <tr className="bg-blue-600/10">
-                  <td className="font-bold text-blue-400">2029</td>
-                  <td className="text-right font-bold text-white">$40.7M</td>
-                  <td className="text-right text-blue-300">$12.0M</td>
-                  <td className="text-right font-bold text-gradient">$28.7M</td>
-                  <td className="text-right font-bold text-gradient">70%</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="card-hero">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="stat-number text-4xl mb-2">First</div>
+                <div className="text-gray-300 font-medium">Tech-focused reality competition ever produced</div>
+              </div>
+              <div>
+                <div className="stat-number text-4xl mb-2">68M</div>
+                <div className="text-gray-300 font-medium">Gen Z viewers seeking authentic tech content</div>
+              </div>
+              <div>
+                <div className="stat-number text-4xl mb-2">Global</div>
+                <div className="text-gray-300 font-medium">Format ready for international adaptation</div>
+              </div>
+            </div>
+            
+            <div className="mt-12 pt-8 border-t border-gray-600">
+              <h3 className="text-xl font-bold mb-6 text-white text-center">Revenue Projections</h3>
+              <div className="grid md:grid-cols-4 gap-6 text-center">
+                <div>
+                  <div className="text-gradient-cyan font-bold text-2xl">$6.5M</div>
+                  <div className="text-gray-400 text-sm">Streaming Rights</div>
+                </div>
+                <div>
+                  <div className="text-gradient-cyan font-bold text-2xl">$4.2M</div>
+                  <div className="text-gray-400 text-sm">Advertising</div>
+                </div>
+                <div>
+                  <div className="text-gradient-cyan font-bold text-2xl">$2.3M</div>
+                  <div className="text-gray-400 text-sm">Sponsorships</div>
+                </div>
+                <div>
+                  <div className="text-gradient-cyan font-bold text-2xl">$1M+</div>
+                  <div className="text-gray-400 text-sm">Merchandise</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -274,7 +281,11 @@ export default function Home() {
       <section className="section-tech">
         <div className="container-tech">
           <div className="text-center mb-16">
-            <h2 className="text-gradient mb-6">Leadership Team</h2>
+            <h2 className="text-gradient mb-6">The Dream Team</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              We've assembled the perfect combination of entertainment industry veterans and Silicon Valley insiders 
+              to bring this vision to life.
+            </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -285,7 +296,8 @@ export default function Home() {
               <h3 className="text-lg font-bold mb-2 text-white">Sarah Chen</h3>
               <p className="text-gradient-cyan font-medium mb-4 text-sm">Executive Producer</p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Former VP Programming at Netflix. 15+ years in reality TV production with Emmy nominations.
+                Former VP Programming at Netflix who greenlit three Emmy-winning reality series. 
+                She knows how to create television that audiences can't stop watching.
               </p>
             </div>
 
@@ -296,7 +308,8 @@ export default function Home() {
               <h3 className="text-lg font-bold mb-2 text-white">Marcus Rivera</h3>
               <p className="text-gradient font-medium mb-4 text-sm">Creator/Showrunner</p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Former tech founder with $120M exit. Emmy-nominated producer with proven track record.
+                Tech entrepreneur who sold his startup for $120M before pivoting to entertainment. 
+                He understands both worlds and knows how to make tech accessible to mainstream audiences.
               </p>
             </div>
 
@@ -305,9 +318,10 @@ export default function Home() {
                 <span className="text-white font-bold text-lg">DK</span>
               </div>
               <h3 className="text-lg font-bold mb-2 text-white">David Kim</h3>
-              <p className="text-gradient-cyan font-medium mb-4 text-sm">Head of Technology</p>
+              <p className="text-gradient-cyan font-medium mb-4 text-sm">Technical Advisor</p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Former CTO at TechStars. 10+ years in tech education and startup mentorship.
+                Former CTO at TechStars with connections to every major tech company. 
+                He ensures our challenges reflect real industry standards and opportunities.
               </p>
             </div>
           </div>
@@ -318,9 +332,10 @@ export default function Home() {
       <section id="contact" className="section-tech bg-gray-800/50">
         <div className="container-tech">
           <div className="text-center mb-16">
-            <h2 className="text-gradient mb-6">Get the Full Pitch Deck</h2>
+            <h2 className="text-gradient mb-6">Let's Make Television History</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Join us in revolutionizing reality TV with the first tech-focused competition series.
+              This isn't just another reality show. It's a cultural phenomenon waiting to happen. 
+              Join us in creating the series that will define a generation.
             </p>
           </div>
           
@@ -342,7 +357,7 @@ export default function Home() {
               
               <div className="bg-blue-600/20 p-6 rounded-xl text-center border border-blue-500/30">
                 <div className="text-2xl font-bold text-gradient mb-1">Series A: $10M</div>
-                <div className="text-gray-300 text-sm">Pre-money valuation: $40M</div>
+                <div className="text-gray-300 text-sm">To produce Season 1 and secure global distribution</div>
               </div>
             </div>
 
