@@ -39,7 +39,7 @@ export default function RootLayout({
 
         <div className="min-h-screen">
           {/* Main Content with responsive spacing that accounts for sidebars */}
-          <div className="px-4 sm:px-6 lg:pl-12 lg:pr-80">
+          <div className="pr-4 sm:pr-6 lg:pr-[320px] pl-4 sm:pl-6 lg:pl-12">
             <main className="py-8 mx-auto" style={{ maxWidth: 'none' }}>
               {children}
             </main>
