@@ -13,7 +13,7 @@ export default function Home() {
                 CONFIDENTIAL PITCH DECK
               </div>
               <h1 className="mb-8">
-                WHO'S THE <span className="text-gradient">GOAT?</span>
+                WHO&apos;S THE <span className="text-gradient">GOAT?</span>
               </h1>
               <p className="text-2xl text-gray-300 mb-4 font-light">
                 The Ultimate Tech Reality Competition
