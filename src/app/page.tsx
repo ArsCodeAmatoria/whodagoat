@@ -1,247 +1,258 @@
 import React from "react";
-import RevenueChart from "../components/revenue-chart";
-import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
-      {/* Simple Navigation Header */}
-      <div className="mb-8 pb-4 border-b border-gray-300">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <h1 className="text-xl font-bold" style={{ fontFamily: 'Courier New, monospace' }}>
-            WHO'S THE GOAT?
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10 text-center max-w-5xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+            WHO'S THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">GOAT</span>?
           </h1>
-          <div className="flex gap-4">
-            <span className="px-3 py-1 bg-black text-white rounded text-sm">
-              Treatment Document
-            </span>
-            <Link 
-              href="/pitch" 
-              className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm transition-colors"
-            >
-              Business Plan
-            </Link>
-          </div>
-        </div>
-        <p className="text-sm text-gray-600 mt-2">
-          A reality competition series pitch for the next generation of tech creators
-        </p>
-      </div>
-
-      <div className="screenplay">
-        {/* Title Page */}
-        <div className="screenplay-title">
-          &ldquo;WHO&apos;S THE GOAT?&rdquo;
-        </div>
-        <div className="screenplay-subtitle">
-          A Reality Competition Series Treatment
-        </div>
-        <div className="screenplay-subtitle">
-          Created by NINE
-        </div>
-        
-        <div className="page-break"></div>
-
-        {/* Logline */}
-        <div className="screenplay-heading">
-          LOGLINE
-        </div>
-        <div className="screenplay-action">
-          Twelve young tech creators aged 18-25 compete in the ultimate reality show where coding meets drama, innovation meets elimination, and only one will prove they are the Greatest of All Tech.
-        </div>
-
-        {/* Format */}
-        <div className="screenplay-heading">
-          FORMAT
-        </div>
-        <div className="screenplay-action">
-          • GENRE: Competition Reality Series<br/>
-          • LENGTH: 12 x 60-minute episodes<br/>
-          • NETWORK: Streaming/Cable (Premium Tier)<br/>
-          • TARGET DEMO: Adults 18-34, Tech-Savvy Millennials & Gen Z<br/>
-          • PRODUCTION TIMELINE: 26 weeks (6 months total)
-        </div>
-
-        {/* Narrator */}
-        <div className="screenplay-heading">
-          NARRATOR
-        </div>
-        <div className="screenplay-action">
-          The young ones come to Los Angeles with their laptops and their dreams. They code in coffee shops and sleep on couches and believe they will change the world. Most will not. But some will.
-        </div>
-        <div className="screenplay-action">
-          This is their story. Twelve of them. The best and the brightest and the hungriest. They will live together and work together and compete against each other until only one remains. The cameras will watch. The audience will judge. The code will not lie.
-        </div>
-        <div className="screenplay-action">
-          There is no mercy in silicon. There is no kindness in algorithms. There is only what works and what does not work. The young ones know this. They have always known this. Now they must prove it.
-        </div>
-        <div className="screenplay-action">
-          In the end, one will stand alone. One will be the greatest. One will be the GOAT.
-        </div>
-
-        {/* Concept Overview */}
-        <div className="screenplay-heading">
-          CONCEPT OVERVIEW
-        </div>
-        <div className="screenplay-action">
-          In a world where technical skills determine career success, &ldquo;WHO&apos;S THE GOAT?&rdquo; takes twelve ambitious creators and puts them through the ultimate test. Each week brings new challenges that push contestants beyond their comfort zones—from building mobile apps under extreme time pressure to pitching their ideas to industry titans.
-        </div>
-        <div className="screenplay-action">
-          But this isn&apos;t just about code. It&apos;s about character. Cameras capture every breakdown, every breakthrough, and every betrayal as contestants navigate both technical challenges and complex social dynamics. Alliances form and crumble. Romances bloom and wither. And through it all, one question drives the competition: Who has what it takes to be the Greatest of All Tech?
-        </div>
-
-        {/* The Arena */}
-        <div className="screenplay-heading">
-          THE ARENA
-        </div>
-        <div className="screenplay-action">
-          Our contestants live and work in a custom-built tech compound featuring:
-        </div>
-        <div className="screenplay-action">
-          • STATE-OF-THE-ART DEVELOPMENT LAB: 12 individual workstations equipped with the latest hardware and software<br/>
-          • COLLABORATION SPACES: Open areas designed for team challenges and social interaction<br/>
-          • LIVING QUARTERS: Shared dormitory-style housing to maximize interpersonal drama<br/>
-          • THE PITCH ROOM: Where contestants present their work to judges and face elimination<br/>
-          • CONFESSIONAL BOOTHS: Private spaces for contestant interviews and emotional moments
-        </div>
-
-        {/* Competition Structure */}
-        <div className="screenplay-heading">
-          COMPETITION STRUCTURE
-        </div>
-        
-        <div className="screenplay-scene-heading">
-          WEEKLY CHALLENGE FORMAT:
-        </div>
-        <div className="screenplay-action">
-          <strong>SKILL CHALLENGE (Day 1-2):</strong> Individual technical test. Winner receives advantage in main challenge plus immunity from elimination.
-        </div>
-        <div className="screenplay-action">
-          <strong>MAIN CHALLENGE (Day 3-5):</strong> Complex project requiring multiple skills—coding, design, user testing, presentation. May be individual or team-based.
-        </div>
-        <div className="screenplay-action">
-          <strong>JUDGING & ELIMINATION (Day 6):</strong> Contestants present their work. Bottom performers face &ldquo;The Debug&rdquo;—a high-pressure technical interview. One contestant eliminated.
-        </div>
-        <div className="screenplay-action">
-          <strong>SOCIAL DYNAMICS (Throughout):</strong> 24/7 filming captures alliances, conflicts, and personal relationships that influence competition strategy.
-        </div>
-
-        {/* Cast Profile */}
-        <div className="screenplay-heading">
-          CONTESTANT PROFILE
-        </div>
-        <div className="screenplay-action">
-          We seek twelve diverse, compelling individuals who represent the future of technology:
-        </div>
-        <div className="screenplay-action">
-          • <strong>THE PRODIGY:</strong> 19-year-old coding genius with zero social skills<br/>
-          • <strong>THE ENTREPRENEUR:</strong> Failed startup founder looking for redemption<br/>
-          • <strong>THE INFLUENCER:</strong> Social media star trying to prove they have real skills<br/>
-          • <strong>THE OUTSIDER:</strong> Self-taught developer from rural America<br/>
-          • <strong>THE CORPORATE REFUGEE:</strong> Big Tech burnout seeking creative freedom<br/>
-          • <strong>THE ACTIVIST:</strong> Passionate about technology for social good<br/>
-          • <strong>THE COMPETITOR:</strong> Hackathon champion who lives to win<br/>
-          • <strong>THE ARTIST:</strong> Creative coder blending technology with art<br/>
-          • <strong>THE HUSTLER:</strong> Street-smart developer with big dreams<br/>
-          • <strong>THE ACADEMIC:</strong> Computer science PhD with imposter syndrome<br/>
-          • <strong>THE VETERAN:</strong> Career-changer using military discipline<br/>
-          • <strong>THE WILD CARD:</strong> Unconventional background, unexpected skills
-        </div>
-
-        {/* Business Section */}
-        <div className="business-section">
-          <div className="business-heading">
-            BUSINESS OVERVIEW
-          </div>
-          
-          <div className="business-subheading">
-            MARKET OPPORTUNITY
-          </div>
-          <div className="business-text">
-            • Reality TV: $2.6B annual U.S. market<br/>
-            • Tech Education: $366B global market<br/>
-            • Target Demographic: 68M Gen Z viewers in U.S.<br/>
-            • Streaming Growth: 15% year-over-year increase
-          </div>
-
-          <div className="business-subheading">
-            REVENUE PROJECTIONS (SEASON 1)
-          </div>
-          <div style={{ margin: '2em 0', padding: '1em', background: '#fafafa' }}>
-            <RevenueChart />
-            <div style={{ 
-              textAlign: 'center', 
-              marginTop: '1em',
-              fontFamily: 'Courier New, monospace',
-              fontSize: '12pt',
-              fontWeight: 'bold'
-            }}>
-              TOTAL REVENUE: $13,800,000
+          <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            The reality competition where 12 young tech creators battle to prove they're the Greatest of All Tech
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="bg-white/10 backdrop-blur-md rounded-lg px-6 py-3 text-white border border-white/20">
+              <span className="text-sm text-gray-300">Format:</span>
+              <span className="ml-2 font-semibold">12 Episodes • 60 Minutes</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg px-6 py-3 text-white border border-white/20">
+              <span className="text-sm text-gray-300">Prize:</span>
+              <span className="ml-2 font-semibold">$100,000 + Mentorship</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg px-6 py-3 text-white border border-white/20">
+              <span className="text-sm text-gray-300">Budget:</span>
+              <span className="ml-2 font-semibold">$6M Production</span>
             </div>
           </div>
+          <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform shadow-2xl">
+            Download Full Pitch Deck
+          </button>
+        </div>
+      </section>
 
-          <div className="business-subheading">
-            PRODUCTION BUDGET
+      {/* Show Concept */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6">The Next Evolution of Reality TV</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              In a world where tech skills determine success, we're creating the first reality competition that combines coding challenges with compelling human drama.
+            </p>
           </div>
-          <div className="business-text">
-            Total Production Cost: $6,000,000<br/>
-            Cost Per Episode: $500,000<br/>
-            <strong>GROSS PROFIT MARGIN: 56% ($7,800,000)</strong>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Now?</h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Tech Skills Crisis</h4>
+                    <p className="text-gray-600">4.4 million unfilled tech jobs create massive audience interest</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Gen Z Engagement</h4>
+                    <p className="text-gray-600">68M viewers hungry for authentic, educational content</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Streaming Wars</h4>
+                    <p className="text-gray-600">Platforms need distinctive content to stand out</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">The Competition</h3>
+              <div className="space-y-4">
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <h4 className="font-semibold text-gray-900">Skill Challenges</h4>
+                  <p className="text-gray-600 text-sm">Individual coding tests with immunity rewards</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <h4 className="font-semibold text-gray-900">Main Challenges</h4>
+                  <p className="text-gray-600 text-sm">Complex projects: apps, startups, presentations</p>
+                </div>
+                <div className="bg-white rounded-lg p-4 shadow-sm">
+                  <h4 className="font-semibold text-gray-900">The Debug</h4>
+                  <p className="text-gray-600 text-sm">High-pressure elimination interview</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Why Now */}
-        <div className="screenplay-heading">
-          WHY NOW?
+      {/* Market Opportunity */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6">Massive Market Opportunity</h2>
+            <p className="text-xl text-gray-600">Multiple billion-dollar markets converging at the perfect moment</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+              <div className="text-4xl font-bold text-purple-600 mb-2">$2.6B</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">Reality TV Market</div>
+              <div className="text-gray-600">U.S. annual market size</div>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">$366B</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">Tech Education</div>
+              <div className="text-gray-600">Global market opportunity</div>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+              <div className="text-4xl font-bold text-green-600 mb-2">68M</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">Target Audience</div>
+              <div className="text-gray-600">Gen Z viewers in U.S.</div>
+            </div>
+          </div>
         </div>
-        <div className="screenplay-action">
-          The convergence of several cultural and economic factors makes this the perfect moment for &ldquo;WHO&apos;S THE GOAT?&rdquo;:
-        </div>
-        <div className="screenplay-action">
-          <strong>TECH SKILLS CRISIS:</strong> 4.4 million unfilled tech jobs in the U.S. create massive audience interest in tech careers.
-        </div>
-        <div className="screenplay-action">
-          <strong>REALITY TV EVOLUTION:</strong> Audiences crave authentic competition with real-world impact, not manufactured drama.
-        </div>
-        <div className="screenplay-action">
-          <strong>STREAMING WARS:</strong> Platforms desperately need distinctive content to differentiate from competitors.
-        </div>
-        <div className="screenplay-action">
-          <strong>SOCIAL MEDIA INTEGRATION:</strong> Tech-savvy contestants naturally create viral moments and online engagement.
-        </div>
+      </section>
 
-        {/* The Hook */}
-        <div className="screenplay-heading">
-          THE HOOK
+      {/* Financial Projections */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6">Compelling Financial Returns</h2>
+            <p className="text-xl text-gray-600">Season 1 projections show strong profitability from day one</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Revenue Breakdown</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Streaming Rights</span>
+                    <span className="font-semibold">$6.5M</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Advertising</span>
+                    <span className="font-semibold">$4.2M</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Sponsorships</span>
+                    <span className="font-semibold">$2.3M</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Merchandise</span>
+                    <span className="font-semibold">$0.8M</span>
+                  </div>
+                  <div className="border-t pt-4 flex justify-between items-center">
+                    <span className="text-lg font-bold text-gray-900">Total Revenue</span>
+                    <span className="text-lg font-bold text-green-600">$13.8M</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Production Costs</h3>
+                <div className="flex justify-between items-center mb-4">
+                  <span className="text-gray-700">Total Production</span>
+                  <span className="font-semibold">$6.0M</span>
+                </div>
+                <div className="flex justify-between items-center text-lg font-bold">
+                  <span className="text-gray-900">Gross Profit</span>
+                  <span className="text-blue-600">$7.8M (56%)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-900 to-purple-900 rounded-2xl p-8 text-white">
+              <h3 className="text-2xl font-bold mb-6">Investment Opportunity</h3>
+              <div className="space-y-6">
+                <div>
+                  <div className="text-sm text-gray-300">Series A Funding</div>
+                  <div className="text-3xl font-bold">$10M</div>
+                  <div className="text-sm text-gray-300">6-month timeline</div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span>Production (60%)</span>
+                    <span>$6.0M</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Marketing (20%)</span>
+                    <span>$2.0M</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Technology (10%)</span>
+                    <span>$1.0M</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Working Capital (10%)</span>
+                    <span>$1.0M</span>
+                  </div>
+                </div>
+                <button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-3 rounded-lg font-semibold hover:scale-105 transition-transform">
+                  Request Investment Details
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="screenplay-action">
-          &ldquo;WHO&apos;S THE GOAT?&rdquo; isn&apos;t just entertainment—it&apos;s education disguised as competition. Viewers don&apos;t just watch; they learn. Each episode includes:
-        </div>
-        <div className="screenplay-action">
-          • SKILL SPOTLIGHTS: Brief segments explaining technical concepts<br/>
-          • MENTOR MOMENTS: Industry leaders share career advice<br/>
-          • CHALLENGE BREAKDOWNS: Step-by-step analysis of problem-solving techniques<br/>
-          • CAREER INSIGHTS: Real-world applications of demonstrated skills
-        </div>
+      </section>
 
-        {/* Conclusion */}
-        <div className="screenplay-heading">
-          CONCLUSION
+      {/* Cast & Competition */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6">Meet the Competitors</h2>
+            <p className="text-xl text-gray-300">12 diverse creators representing the future of technology</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {[
+              { title: "The Prodigy", desc: "19-year-old coding genius", color: "from-purple-500 to-pink-500" },
+              { title: "The Entrepreneur", desc: "Failed startup founder", color: "from-blue-500 to-cyan-500" },
+              { title: "The Influencer", desc: "Social media star", color: "from-green-500 to-emerald-500" },
+              { title: "The Outsider", desc: "Self-taught from rural America", color: "from-yellow-500 to-orange-500" },
+              { title: "The Corporate Refugee", desc: "Big Tech burnout", color: "from-red-500 to-pink-500" },
+              { title: "The Activist", desc: "Tech for social good", color: "from-indigo-500 to-purple-500" },
+              { title: "The Competitor", desc: "Hackathon champion", color: "from-cyan-500 to-blue-500" },
+              { title: "The Artist", desc: "Creative coder", color: "from-emerald-500 to-green-500" },
+            ].map((contestant, index) => (
+              <div key={index} className={`bg-gradient-to-br ${contestant.color} rounded-xl p-6 text-center`}>
+                <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4"></div>
+                <h3 className="font-bold text-lg mb-2">{contestant.title}</h3>
+                <p className="text-sm opacity-90">{contestant.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="screenplay-action">
-          &ldquo;WHO&apos;S THE GOAT?&rdquo; represents more than entertainment—it&apos;s a cultural phenomenon waiting to happen. By combining the addictive drama of reality competition with the aspirational appeal of tech success stories, we create appointment television that both entertains and inspires.
-        </div>
-        <div className="screenplay-action">
-          The question isn&apos;t whether audiences want this show. The question is: which network will be bold enough to greenlight the future of reality television?
-        </div>
-        <div className="screenplay-action">
-          Who&apos;s the GOAT? Let&apos;s find out.
-        </div>
+      </section>
 
-        <div className="screenplay-action" style={{ textAlign: 'center', marginTop: '4em', fontWeight: 'bold' }}>
-          FADE OUT.
+      {/* Call to Action */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-400 to-orange-500">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-5xl font-bold text-black mb-6">Ready to Find the GOAT?</h2>
+          <p className="text-xl text-black/80 mb-8">
+            Join us in creating the reality series that will define the next decade of television
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-black text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform">
+              Schedule Pitch Meeting
+            </button>
+            <button className="bg-white/20 backdrop-blur text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-colors">
+              Download Business Plan
+            </button>
+          </div>
+          <div className="mt-12 pt-8 border-t border-black/20 text-black/70">
+            <p className="font-semibold">Nine Productions • Los Angeles, CA</p>
+            <p>info@nineproductions.com • Ready for Production</p>
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
 }
