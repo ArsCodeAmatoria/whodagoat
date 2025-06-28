@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased bg-white`}>
-        {/* Left Side Footer with Vertical Text - responsive visibility */}
+        {/* Left Side Footer with Vertical Text - hidden on mobile, visible on desktop */}
         <div 
-          className="fixed left-0 top-0 bottom-0 w-8 lg:flex hidden items-center justify-center bg-gray-50"
-          style={{ zIndex: 50, position: 'fixed' }}
+          className="hidden lg:flex fixed left-0 top-0 bottom-0 w-8 items-center justify-center bg-gray-50"
+          style={{ zIndex: 50 }}
         >
           <div 
             className="text-gray-400 tracking-widest"
@@ -38,9 +38,9 @@ export default function RootLayout({
         </div>
 
         <div className="min-h-screen">
-          {/* Main Content with responsive spacing */}
-          <div className="px-4 sm:px-6 lg:pr-80 lg:pl-12">
-            <main className="py-8 max-w-4xl lg:mx-auto">
+          {/* Main Content with responsive spacing that accounts for sidebars */}
+          <div className="px-4 sm:px-6 lg:pl-12 lg:pr-80">
+            <main className="py-8 mx-auto" style={{ maxWidth: 'none' }}>
               {children}
             </main>
           </div>

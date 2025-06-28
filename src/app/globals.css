@@ -45,10 +45,18 @@ body {
   line-height: 1.6;
   color: black;
   background: white;
-  max-width: 6.5in;
+  width: 100%;
+  max-width: min(6.5in, 100%);
   margin: 0 auto;
-  padding: 1in;
+  padding: 1rem;
   min-height: 8.5in;
+}
+
+@media (min-width: 1024px) {
+  .screenplay {
+    max-width: 6.5in;
+    padding: 1in;
+  }
 }
 
 .screenplay-title {
