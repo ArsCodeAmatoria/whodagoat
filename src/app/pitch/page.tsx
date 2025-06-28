@@ -1,12 +1,34 @@
 import React from "react";
-import NavigationBox from "../../components/navigation-box";
 import FinancialChart from "../../components/financial-chart";
 import RevenueChart from "../../components/revenue-chart";
+import Link from "next/link";
 
 export default function PitchPage() {
   return (
     <>
-      <NavigationBox currentPage="business" />
+      {/* Simple Navigation Header */}
+      <div className="mb-8 pb-4 border-b border-gray-300">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <h1 className="text-xl font-bold" style={{ fontFamily: 'Courier New, monospace' }}>
+            WHO'S THE GOAT?
+          </h1>
+          <div className="flex gap-4">
+            <Link 
+              href="/" 
+              className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm transition-colors"
+            >
+              Treatment Document
+            </Link>
+            <span className="px-3 py-1 bg-black text-white rounded text-sm">
+              Business Plan
+            </span>
+          </div>
+        </div>
+        <p className="text-sm text-gray-600 mt-2">
+          Business plan & investment proposal for the reality competition series
+        </p>
+      </div>
+
       <div className="screenplay">
         {/* Title Page */}
         <div className="screenplay-title">
@@ -199,7 +221,7 @@ export default function PitchPage() {
               <td>Above-the-Line</td>
               <td>$1,200,000</td>
               <td>20%</td>
-              <td>Host, judges, producers</td>
+              <td>Host, judges, producer fees</td>
             </tr>
             <tr>
               <td>Below-the-Line</td>
@@ -209,351 +231,237 @@ export default function PitchPage() {
             </tr>
             <tr>
               <td>Location & Sets</td>
-              <td>$900,000</td>
-              <td>15%</td>
-              <td>Tech compound, workstations</td>
+              <td>$1,200,000</td>
+              <td>20%</td>
+              <td>Compound build-out, technology</td>
             </tr>
             <tr>
               <td>Contestant Costs</td>
               <td>$600,000</td>
               <td>10%</td>
-              <td>Housing, food, stipends, prizes</td>
-            </tr>
-            <tr>
-              <td>Technology & Equipment</td>
-              <td>$480,000</td>
-              <td>8%</td>
-              <td>Computers, software, servers</td>
-            </tr>
-            <tr>
-              <td>Marketing & Promotion</td>
-              <td>$300,000</td>
-              <td>5%</td>
-              <td>Launch campaign, PR</td>
+              <td>Stipends, housing, prize money</td>
             </tr>
             <tr>
               <td>Contingency</td>
-              <td>$120,000</td>
-              <td>2%</td>
-              <td>Overruns, reshoots</td>
-            </tr>
-            <tr>
-              <td><strong>TOTAL COSTS</strong></td>
-              <td><strong>$6,000,000</strong></td>
-              <td><strong>100%</strong></td>
-              <td><strong>$500K per episode</strong></td>
+              <td>$600,000</td>
+              <td>10%</td>
+              <td>Overages, insurance, legal</td>
             </tr>
           </tbody>
         </table>
 
         <div className="business-subheading">
-          3-YEAR FINANCIAL FORECAST
+          FINANCIAL PERFORMANCE CHART
         </div>
-        <table className="business-table">
-          <thead>
-            <tr>
-              <th>METRIC</th>
-              <th>YEAR 1</th>
-              <th>YEAR 2</th>
-              <th>YEAR 3</th>
-              <th>TOTAL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Revenue</td>
-              <td>$13,800,000</td>
-              <td>$18,500,000</td>
-              <td>$22,200,000</td>
-              <td>$54,500,000</td>
-            </tr>
-            <tr>
-              <td>Production Costs</td>
-              <td>$6,000,000</td>
-              <td>$7,200,000</td>
-              <td>$8,100,000</td>
-              <td>$21,300,000</td>
-            </tr>
-            <tr>
-              <td>Gross Profit</td>
-              <td>$7,800,000</td>
-              <td>$11,300,000</td>
-              <td>$14,100,000</td>
-              <td>$33,200,000</td>
-            </tr>
-            <tr>
-              <td>Gross Margin</td>
-              <td>56%</td>
-              <td>61%</td>
-              <td>64%</td>
-              <td>61%</td>
-            </tr>
-            <tr>
-              <td>Episodes</td>
-              <td>12</td>
-              <td>15</td>
-              <td>18</td>
-              <td>45</td>
-            </tr>
-          </tbody>
-        </table>
-
-        {/* Risk Analysis */}
-        <div className="business-heading">
-          RISK ANALYSIS & MITIGATION
+        <div style={{ margin: '2em 0', padding: '1em', background: '#fafafa' }}>
+          <FinancialChart />
+          <div style={{ 
+            marginTop: '1em',
+            fontFamily: 'Courier New, monospace',
+            fontSize: '11pt',
+            textAlign: 'center'
+          }}>
+            <strong>PROJECTED GROSS PROFIT: $7,800,000 (56% MARGIN)</strong>
+          </div>
         </div>
 
-        <div className="business-subheading">
-          PRODUCTION RISKS
-        </div>
-        <table className="business-table">
-          <thead>
-            <tr>
-              <th>RISK</th>
-              <th>PROBABILITY</th>
-              <th>IMPACT</th>
-              <th>MITIGATION STRATEGY</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Contestant dropout</td>
-              <td>Medium</td>
-              <td>High</td>
-              <td>Alternate contestants, insurance</td>
-            </tr>
-            <tr>
-              <td>Technical failures</td>
-              <td>Low</td>
-              <td>Medium</td>
-              <td>Backup systems, IT support</td>
-            </tr>
-            <tr>
-              <td>Budget overruns</td>
-              <td>Medium</td>
-              <td>High</td>
-              <td>Fixed-price contracts, contingency</td>
-            </tr>
-            <tr>
-              <td>Scheduling delays</td>
-              <td>High</td>
-              <td>Medium</td>
-              <td>Buffer time, flexible crew</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div className="business-subheading">
-          MARKET RISKS
-        </div>
-        <table className="business-table">
-          <thead>
-            <tr>
-              <th>RISK</th>
-              <th>PROBABILITY</th>
-              <th>IMPACT</th>
-              <th>MITIGATION STRATEGY</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Streaming platform rejection</td>
-              <td>Low</td>
-              <td>High</td>
-              <td>Multiple platform strategy</td>
-            </tr>
-            <tr>
-              <td>Audience reception</td>
-              <td>Medium</td>
-              <td>High</td>
-              <td>Focus groups, test episodes</td>
-            </tr>
-            <tr>
-              <td>Competitive response</td>
-              <td>High</td>
-              <td>Medium</td>
-              <td>First-mover advantage, IP protection</td>
-            </tr>
-            <tr>
-              <td>Economic downturn</td>
-              <td>Medium</td>
-              <td>Medium</td>
-              <td>Diverse revenue streams</td>
-            </tr>
-          </tbody>
-        </table>
-
-        {/* Management Team */}
-        <div className="business-heading">
-          MANAGEMENT TEAM
-        </div>
-
-        <div className="business-subheading">
-          EXECUTIVE PRODUCER
-        </div>
-        <div className="business-text">
-          [Name], Executive Producer<br/>
-          • 15+ years reality TV production experience<br/>
-          • Credits include [Major Reality Shows]<br/>
-          • Emmy Award winner, industry relationships<br/>
-          • Expertise in casting, story development, post-production<br/>
-          • NINE Leadership Team
-        </div>
-
-        <div className="business-subheading">
-          TECHNICAL DIRECTOR
-        </div>
-        <div className="business-text">
-          [Name], Technical Director<br/>
-          • Former Silicon Valley engineering manager<br/>
-          • 20+ years software development experience<br/>
-          • Expertise in challenge design, technical judging<br/>
-          • Connections to major tech companies for partnerships
-        </div>
-
-        <div className="business-subheading">
-          CASTING DIRECTOR
-        </div>
-        <div className="business-text">
-          [Name], Casting Director<br/>
-          • Specialist in tech talent identification<br/>
-          • Network of university relationships<br/>
-          • Experience with diverse casting requirements<br/>
-          • Track record of finding compelling personalities
-        </div>
-
-        {/* Investment Ask */}
+        {/* Investment Terms */}
         <div className="business-heading">
           INVESTMENT OPPORTUNITY
         </div>
 
         <div className="business-subheading">
-          FUNDING REQUEST
-        </div>
-        <div className="business-text">
-          We are seeking $10,000,000 in Series A funding to produce the first season of &ldquo;WHO&apos;S THE GOAT?&rdquo; and establish the foundation for a multi-season franchise.
-        </div>
-
-        <div className="business-subheading">
-          USE OF FUNDS
+          FUNDING REQUIREMENTS
         </div>
         <table className="business-table">
           <thead>
             <tr>
-              <th>CATEGORY</th>
+              <th>FUNDING STAGE</th>
               <th>AMOUNT</th>
-              <th>PERCENTAGE</th>
               <th>PURPOSE</th>
+              <th>TIMELINE</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Season 1 Production</td>
-              <td>$6,000,000</td>
-              <td>60%</td>
-              <td>Full 12-episode production</td>
+              <td>Series A</td>
+              <td>$10,000,000</td>
+              <td>Season 1 production & development</td>
+              <td>Next 6 months</td>
             </tr>
             <tr>
-              <td>Marketing & Launch</td>
-              <td>$2,000,000</td>
-              <td>20%</td>
-              <td>Platform partnerships, PR campaign</td>
+              <td>Series B</td>
+              <td>$25,000,000</td>
+              <td>Multi-season commitment</td>
+              <td>Year 2-3</td>
             </tr>
             <tr>
-              <td>Technology Platform</td>
-              <td>$1,000,000</td>
-              <td>10%</td>
-              <td>Viewer challenges, online community</td>
-            </tr>
-            <tr>
-              <td>Working Capital</td>
-              <td>$500,000</td>
-              <td>5%</td>
-              <td>Operations, pre-production</td>
-            </tr>
-            <tr>
-              <td>Legal & Professional</td>
-              <td>$300,000</td>
-              <td>3%</td>
-              <td>Contracts, IP protection</td>
-            </tr>
-            <tr>
-              <td>Contingency</td>
-              <td>$200,000</td>
-              <td>2%</td>
-              <td>Unforeseen expenses</td>
+              <td>International</td>
+              <td>$50,000,000</td>
+              <td>Global format licensing</td>
+              <td>Year 3-5</td>
             </tr>
           </tbody>
         </table>
 
         <div className="business-subheading">
-          INVESTOR RETURNS
+          INVESTOR BENEFITS
         </div>
-        <div style={{ margin: '2em 0', padding: '1em', background: '#fafafa' }}>
-          <FinancialChart />
+        <div className="business-text">
+          • <strong>IMMEDIATE ROI:</strong> 56% gross margin on Season 1<br/>
+          • <strong>SCALABLE FORMAT:</strong> International licensing potential<br/>
+          • <strong>BRAND EXTENSION:</strong> Educational content, merchandise, live events<br/>
+          • <strong>TECH PARTNERSHIP:</strong> Exclusive access to emerging talent<br/>
+          • <strong>CULTURAL IMPACT:</strong> Address critical tech skills shortage
         </div>
 
-        {/* Exit Strategy */}
+        {/* Risk Analysis */}
         <div className="business-heading">
-          EXIT STRATEGY
+          RISK ASSESSMENT
         </div>
 
         <div className="business-subheading">
-          ACQUISITION TARGETS
+          RISK MITIGATION STRATEGIES
         </div>
-        <div className="business-text">
-          • <strong>Media Conglomerates:</strong> Disney, NBCUniversal, ViacomCBS seeking tech-focused content<br/>
-          • <strong>Streaming Platforms:</strong> Netflix, Amazon, Apple expanding original programming<br/>
-          • <strong>Tech Companies:</strong> Google, Microsoft, META exploring education/entertainment crossover<br/>
-          • <strong>AI Companies:</strong> Xai advancing tech education and creator development<br/>
-          • <strong>Startup Accelerators:</strong> Y Combinator expanding into media and creator economy<br/>
-          • <strong>Production Companies:</strong> Endemol Shine, Fremantle building reality TV portfolios
+        <table className="business-table">
+          <thead>
+            <tr>
+              <th>RISK FACTOR</th>
+              <th>PROBABILITY</th>
+              <th>IMPACT</th>
+              <th>MITIGATION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Market Saturation</td>
+              <td>Low</td>
+              <td>Medium</td>
+              <td>First-mover advantage in tech reality</td>
+            </tr>
+            <tr>
+              <td>Production Delays</td>
+              <td>Medium</td>
+              <td>High</td>
+              <td>Experienced production team, buffer time</td>
+            </tr>
+            <tr>
+              <td>Talent Acquisition</td>
+              <td>Low</td>
+              <td>Medium</td>
+              <td>Strong casting strategy, industry partnerships</td>
+            </tr>
+            <tr>
+              <td>Technology Changes</td>
+              <td>Medium</td>
+              <td>Low</td>
+              <td>Flexible format, trend adaptation</td>
+            </tr>
+          </tbody>
+        </table>
+
+        {/* Implementation Timeline */}
+        <div className="business-heading">
+          PRODUCTION TIMELINE
         </div>
 
         <div className="business-subheading">
-          VALUATION MULTIPLES
+          PHASE 1: PRE-PRODUCTION (MONTHS 1-3)
         </div>
         <div className="business-text">
-          Based on comparable transactions in reality TV and educational content:<br/>
-          • Revenue Multiple: 3-5x annual revenue<br/>
-          • EBITDA Multiple: 8-12x annual EBITDA<br/>
-          • Strategic Premium: 20-40% for unique IP and audience
+          • Secure funding and network partnership<br/>
+          • Complete casting and talent acquisition<br/>
+          • Design and build production compound<br/>
+          • Hire key production staff<br/>
+          • Finalize challenge formats and storylines
         </div>
 
         <div className="business-subheading">
-          TIMELINE TO EXIT
+          PHASE 2: PRODUCTION (MONTHS 4-5)
         </div>
         <div className="business-text">
-          • <strong>Year 2:</strong> Strategic partnership discussions<br/>
-          • <strong>Year 3:</strong> Formal acquisition process<br/>
-          • <strong>Year 4:</strong> Target exit completion<br/>
-          • <strong>Expected Valuation:</strong> $150-200M based on proven success
+          • 8 weeks of principal photography<br/>
+          • 24/7 filming of contestant activities<br/>
+          • 12 elimination challenges<br/>
+          • Confessional interviews and testimonials<br/>
+          • Judge deliberations and finale
         </div>
 
-        {/* Contact */}
+        <div className="business-subheading">
+          PHASE 3: POST-PRODUCTION (MONTHS 6-8)
+        </div>
+        <div className="business-text">
+          • Edit 12 episodes + reunion special<br/>
+          • Color correction and audio mixing<br/>
+          • Graphics, music, and sound design<br/>
+          • Network delivery and marketing prep<br/>
+          • International sales and distribution
+        </div>
+
+        {/* Success Metrics */}
+        <div className="business-heading">
+          SUCCESS METRICS
+        </div>
+
+        <div className="business-subheading">
+          KEY PERFORMANCE INDICATORS
+        </div>
+        <table className="business-table">
+          <thead>
+            <tr>
+              <th>METRIC</th>
+              <th>TARGET</th>
+              <th>BENCHMARK</th>
+              <th>MEASUREMENT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Premiere Viewership</td>
+              <td>5M viewers</td>
+              <td>Top 10 reality debut</td>
+              <td>Nielsen + streaming data</td>
+            </tr>
+            <tr>
+              <td>Season Average</td>
+              <td>3.5M viewers</td>
+              <td>Network top 5</td>
+              <td>Live + 7 day viewing</td>
+            </tr>
+            <tr>
+              <td>Social Engagement</td>
+              <td>50M interactions</td>
+              <td>Viral content creation</td>
+              <td>Cross-platform analytics</td>
+            </tr>
+            <tr>
+              <td>Critical Reception</td>
+              <td>75+ Metacritic</td>
+              <td>Awards consideration</td>
+              <td>Professional reviews</td>
+            </tr>
+          </tbody>
+        </table>
+
+        {/* Call to Action */}
         <div className="business-heading">
           NEXT STEPS
         </div>
         <div className="business-text">
-          We are ready to begin pre-production immediately upon funding. Our experienced team has developed comprehensive production plans, casting strategies, and partnership frameworks.
+          &ldquo;WHO&apos;S THE GOAT?&rdquo; represents a once-in-a-generation opportunity to create appointment television that both entertains and educates. With the tech industry facing an unprecedented talent shortage and audiences hungry for authentic competition content, the timing has never been better.
         </div>
         <div className="business-text">
-          For additional information, including detailed financial models, production schedules, and partnership agreements, please contact:
+          We are seeking visionary partners who understand that the future of entertainment lies at the intersection of technology and storytelling. Join us in creating the reality series that will define the next decade of television.
         </div>
         <div className="business-text">
-          Email: <a href="mailto:arscodeamatoria@gmail.com" className="text-blue-600 underline">arscodeamatoria@gmail.com</a><br/>
-          Phone: [Phone Number]<br/>
-          Location: Los Angeles, California<br/>
-          Production House: NINE<br/>
-          Status: Series A Funding Round Open
+          <strong>Contact Information:</strong><br/>
+          Nine Productions<br/>
+          Los Angeles, California<br/>
+          Email: info@nineproductions.com
         </div>
-
-        <div className="business-text">
-          <strong className="text-red-600">CONFIDENTIALITY NOTICE:</strong> This business plan contains proprietary and confidential information. Any reproduction or distribution is strictly prohibited without written consent.
-        </div>
-
-        <div className="screenplay-transition">
-          END OF BUSINESS PLAN
+        <div className="business-text" style={{ textAlign: 'center', marginTop: '3em', fontWeight: 'bold' }}>
+          THE QUESTION ISN&apos;T WHETHER THIS SHOW WILL SUCCEED.<br/>
+          THE QUESTION IS: WILL YOU BE PART OF ITS SUCCESS?
         </div>
       </div>
     </>

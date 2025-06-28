@@ -1,11 +1,33 @@
 import React from "react";
-import NavigationBox from "../components/navigation-box";
 import RevenueChart from "../components/revenue-chart";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <NavigationBox currentPage="treatment" />
+      {/* Simple Navigation Header */}
+      <div className="mb-8 pb-4 border-b border-gray-300">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <h1 className="text-xl font-bold" style={{ fontFamily: 'Courier New, monospace' }}>
+            WHO'S THE GOAT?
+          </h1>
+          <div className="flex gap-4">
+            <span className="px-3 py-1 bg-black text-white rounded text-sm">
+              Treatment Document
+            </span>
+            <Link 
+              href="/pitch" 
+              className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm transition-colors"
+            >
+              Business Plan
+            </Link>
+          </div>
+        </div>
+        <p className="text-sm text-gray-600 mt-2">
+          A reality competition series pitch for the next generation of tech creators
+        </p>
+      </div>
+
       <div className="screenplay">
         {/* Title Page */}
         <div className="screenplay-title">
@@ -198,64 +220,25 @@ export default function Home() {
         <div className="screenplay-action">
           • SKILL SPOTLIGHTS: Brief segments explaining technical concepts<br/>
           • MENTOR MOMENTS: Industry leaders share career advice<br/>
-          • VIEWER CHALLENGES: Online coding challenges tied to episode content<br/>
-          • CAREER PATHS: Profiles of different tech career options
+          • CHALLENGE BREAKDOWNS: Step-by-step analysis of problem-solving techniques<br/>
+          • CAREER INSIGHTS: Real-world applications of demonstrated skills
         </div>
 
-        {/* Finale */}
+        {/* Conclusion */}
         <div className="screenplay-heading">
-          SEASON FINALE
+          CONCLUSION
         </div>
         <div className="screenplay-action">
-          The final three contestants have 48 hours to build and launch a complete application. They must:
+          &ldquo;WHO&apos;S THE GOAT?&rdquo; represents more than entertainment—it&apos;s a cultural phenomenon waiting to happen. By combining the addictive drama of reality competition with the aspirational appeal of tech success stories, we create appointment television that both entertains and inspires.
         </div>
         <div className="screenplay-action">
-          • Develop a working product from concept to deployment<br/>
-          • Present to a panel of tech industry legends<br/>
-          • Defend their work in a live Q&A session<br/>
-          • Win over a studio audience of tech professionals
+          The question isn&apos;t whether audiences want this show. The question is: which network will be bold enough to greenlight the future of reality television?
         </div>
         <div className="screenplay-action">
-          The winner receives:
-        </div>
-        <div className="screenplay-action">
-          • $100,000 cash prize<br/>
-          • One-year mentorship with industry leader<br/>
-          • $50,000 in development resources<br/>
-          • Guaranteed meetings with top VCs and tech companies<br/>
-          • The title: Greatest of All Tech
+          Who&apos;s the GOAT? Let&apos;s find out.
         </div>
 
-        {/* Project Status */}
-        <div className="screenplay-heading">
-          PROJECT STATUS
-        </div>
-        <div className="screenplay-action">
-          <strong>PRODUCTION READINESS:</strong> All systems go for immediate production start<br/>
-          <strong>INVESTMENT STATUS:</strong> Seeking $10M Series A funding<br/>
-          <strong>CASTING PREPARATION:</strong> Strategy complete, ready to launch<br/>
-          <strong>LOCATION:</strong> Los Angeles, California<br/>
-          <strong>STUDIO CODE:</strong> NINE
-        </div>
-
-        {/* Contact */}
-        <div className="screenplay-heading">
-          CONTACT
-        </div>
-        <div className="screenplay-action">
-          For more information about &ldquo;WHO&apos;S THE GOAT?&rdquo; including full business plan, casting strategy, and production timeline, contact:
-        </div>
-        <div className="screenplay-action">
-          Email: <a href="mailto:arscodeamatoria@gmail.com" className="text-blue-600 underline">arscodeamatoria@gmail.com</a><br/>
-          Location: Los Angeles, California<br/>
-          Production Studio: NINE<br/>
-          Status: Ready for Production
-        </div>
-        <div className="screenplay-action">
-          <strong className="text-red-600">CONFIDENTIAL DOCUMENT</strong>
-        </div>
-
-        <div className="screenplay-transition">
+        <div className="screenplay-action" style={{ textAlign: 'center', marginTop: '4em', fontWeight: 'bold' }}>
           FADE OUT.
         </div>
       </div>
