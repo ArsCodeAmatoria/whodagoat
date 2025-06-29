@@ -525,10 +525,10 @@ export default function Home() {
                       <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
                     </div>
                   </div>
-                  <p className="hero-description text-sm leading-relaxed">
+                  <p className="hero-description text-sm leading-relaxed mb-6">
                     Epic final challenge determines the Greatest of All Tech with $100K prize.
                   </p>
-                  <div className="mt-4 flex items-center gap-2">
+                  <div className="mt-6 flex items-center gap-2">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
                     <span className="text-xs text-yellow-400 font-medium">Grand Finale</span>
                   </div>
@@ -537,7 +537,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
       </section>
+
+      {/* Massive spacing between sections */}
+      <div className="h-48 bg-transparent"></div>
 
       {/* Grand Prize Section */}
       <section className="relative py-24 px-4 md:px-6">
@@ -570,14 +574,9 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Financial Prize */}
             <div className="card group">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-black">$</span>
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-gradient">$100,000</h3>
-                  <p className="text-sm hero-description">Startup Capital</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-4xl font-bold text-gradient mb-2">$100,000</h3>
+                <p className="text-lg hero-description font-semibold">Startup Capital</p>
               </div>
               <p className="hero-description leading-relaxed">
                 Seed funding to launch your startup dreams with no strings attached. 
@@ -587,14 +586,9 @@ export default function Home() {
             
             {/* Mentorship */}
             <div className="card group">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-black">M</span>
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-gradient">Mentorship</h3>
-                  <p className="text-sm hero-description">Elite Network Access</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-4xl font-bold text-gradient mb-2">Mentorship</h3>
+                <p className="text-lg hero-description font-semibold">Elite Network Access</p>
               </div>
               <p className="hero-description leading-relaxed">
                 One-on-one mentoring with top founders, VCs, and industry leaders. 
@@ -604,14 +598,9 @@ export default function Home() {
             
             {/* Launch Support */}
             <div className="card group">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-black">L</span>
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-gradient">Launch Support</h3>
-                  <p className="text-sm hero-description">Production Team</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-4xl font-bold text-gradient mb-2">Launch Support</h3>
+                <p className="text-lg hero-description font-semibold">Production Team</p>
               </div>
               <p className="hero-description leading-relaxed">
                 Complete app development, marketing, and launch support from our professional team. 
@@ -621,14 +610,9 @@ export default function Home() {
             
             {/* The Crown */}
             <div className="card group">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
-                  <Crown className="w-8 h-8 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-gradient">The Crown</h3>
-                  <p className="text-sm hero-description">GOAT Status</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-4xl font-bold text-gradient mb-2">GOAT Status</h3>
+                <p className="text-lg hero-description font-semibold">Ultimate Recognition</p>
               </div>
               <p className="hero-description leading-relaxed">
                 The ultimate recognition as the GOAT. Join an exclusive alumni network and become 
@@ -674,30 +658,30 @@ export default function Home() {
                 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="group">
-                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-emerald-400/30 transition-all duration-300">
-                      <div className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-2">12</div>
-                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Contestants</div>
+                    <div className="bg-gradient-to-br from-emerald-900/30 to-emerald-800/40 rounded-xl p-6 border border-emerald-400/20 hover:border-emerald-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-400/10">
+                      <div className="text-5xl font-bold text-emerald-300 mb-2 drop-shadow-lg">12</div>
+                      <div className="text-sm text-emerald-100 uppercase tracking-wider font-semibold">Contestants</div>
                     </div>
                   </div>
                   
                   <div className="group">
-                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-blue-400/30 transition-all duration-300">
-                      <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">$100K</div>
-                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Grand Prize</div>
+                    <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/40 rounded-xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/10">
+                      <div className="text-5xl font-bold text-blue-300 mb-2 drop-shadow-lg">$100K</div>
+                      <div className="text-sm text-blue-100 uppercase tracking-wider font-semibold">Grand Prize</div>
                     </div>
                   </div>
                   
                   <div className="group">
-                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-purple-400/30 transition-all duration-300">
-                      <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">44m</div>
-                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Episode Length</div>
+                    <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/40 rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-400/10">
+                      <div className="text-5xl font-bold text-purple-300 mb-2 drop-shadow-lg">44m</div>
+                      <div className="text-sm text-purple-100 uppercase tracking-wider font-semibold">Episode Length</div>
                     </div>
                   </div>
                   
                   <div className="group">
-                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-yellow-400/30 transition-all duration-300">
-                      <div className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-2">12</div>
-                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Episodes</div>
+                    <div className="bg-gradient-to-br from-yellow-900/30 to-orange-800/40 rounded-xl p-6 border border-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/10">
+                      <div className="text-5xl font-bold text-yellow-300 mb-2 drop-shadow-lg">12</div>
+                      <div className="text-sm text-yellow-100 uppercase tracking-wider font-semibold">Episodes</div>
                     </div>
                   </div>
                 </div>
