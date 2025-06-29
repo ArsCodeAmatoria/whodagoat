@@ -662,76 +662,109 @@ export default function Home() {
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Show Stats */}
-            <div className="card">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold text-black">📊</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {/* Show Metrics */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-cyan-500/10 to-blue-500/10 rounded-2xl blur-xl"></div>
+              <div className="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-1 h-8 bg-gradient-to-b from-emerald-400 to-cyan-400 rounded-full"></div>
+                  <h4 className="hero-title text-2xl">Show Metrics</h4>
                 </div>
-                <h4 className="text-xl font-semibold text-gradient">Show Details</h4>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-4 rounded-lg bg-white/5">
-                  <div className="text-2xl font-bold text-gradient mb-1">12</div>
-                  <div className="text-sm hero-description">Contestants</div>
-                </div>
-                <div className="text-center p-4 rounded-lg bg-white/5">
-                  <div className="text-2xl font-bold text-gradient mb-1">$100K</div>
-                  <div className="text-sm hero-description">Grand Prize</div>
-                </div>
-                <div className="text-center p-4 rounded-lg bg-white/5">
-                  <div className="text-2xl font-bold text-gradient mb-1">44min</div>
-                  <div className="text-sm hero-description">Episode Length</div>
-                </div>
-                <div className="text-center p-4 rounded-lg bg-white/5">
-                  <div className="text-2xl font-bold text-gradient mb-1">12</div>
-                  <div className="text-sm hero-description">Episodes</div>
+                
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="group">
+                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-emerald-400/30 transition-all duration-300">
+                      <div className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mb-2">12</div>
+                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Contestants</div>
+                    </div>
+                  </div>
+                  
+                  <div className="group">
+                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-blue-400/30 transition-all duration-300">
+                      <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">$100K</div>
+                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Grand Prize</div>
+                    </div>
+                  </div>
+                  
+                  <div className="group">
+                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-purple-400/30 transition-all duration-300">
+                      <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">44m</div>
+                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Episode Length</div>
+                    </div>
+                  </div>
+                  
+                  <div className="group">
+                    <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/5 hover:border-yellow-400/30 transition-all duration-300">
+                      <div className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-2">12</div>
+                      <div className="text-sm text-white/60 uppercase tracking-wider font-medium">Episodes</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Production Status */}
-            <div className="card">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold text-black">🎬</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gradient">Production Status</h4>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></div>
-                    <span className="hero-description">Silicon Valley Studio</span>
-                  </div>
-                  <span className="text-emerald-400 text-sm font-medium">Ready</span>
+            {/* Production Pipeline */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-red-500/10 rounded-2xl blur-xl"></div>
+              <div className="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-1 h-8 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"></div>
+                  <h4 className="hero-title text-2xl">Production Pipeline</h4>
                 </div>
                 
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                    <span className="hero-description">Casting Network</span>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 rounded-xl border border-emerald-400/20">
+                    <div className="flex items-center gap-4">
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                      <div>
+                        <div className="font-medium text-white">Silicon Valley Studio</div>
+                        <div className="text-xs text-white/60 mt-1">Ready for production</div>
+                      </div>
+                    </div>
+                    <div className="px-3 py-1 bg-emerald-400/20 border border-emerald-400/30 rounded-full">
+                      <span className="text-emerald-400 text-xs font-medium uppercase tracking-wider">Online</span>
+                    </div>
                   </div>
-                  <span className="text-blue-400 text-sm font-medium">Active</span>
-                </div>
-                
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                    <span className="hero-description">Production Team</span>
+                  
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-400/20">
+                    <div className="flex items-center gap-4">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                      <div>
+                        <div className="font-medium text-white">Casting Network</div>
+                        <div className="text-xs text-white/60 mt-1">Recruiting talent</div>
+                      </div>
+                    </div>
+                    <div className="px-3 py-1 bg-blue-400/20 border border-blue-400/30 rounded-full">
+                      <span className="text-blue-400 text-xs font-medium uppercase tracking-wider">Active</span>
+                    </div>
                   </div>
-                  <span className="text-purple-400 text-sm font-medium">Assembled</span>
-                </div>
-                
-                <div className="flex items-center justify-between p-3 rounded-lg bg-white/5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-pulse"></div>
-                    <span className="hero-description">Investor Panel</span>
+                  
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-400/20">
+                    <div className="flex items-center gap-4">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                      <div>
+                        <div className="font-medium text-white">Production Team</div>
+                        <div className="text-xs text-white/60 mt-1">Crew assembled</div>
+                      </div>
+                    </div>
+                    <div className="px-3 py-1 bg-purple-400/20 border border-purple-400/30 rounded-full">
+                      <span className="text-purple-400 text-xs font-medium uppercase tracking-wider">Ready</span>
+                    </div>
                   </div>
-                  <span className="text-yellow-400 text-sm font-medium">Standing By</span>
+                  
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl border border-yellow-400/20">
+                    <div className="flex items-center gap-4">
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                      <div>
+                        <div className="font-medium text-white">Investor Panel</div>
+                        <div className="text-xs text-white/60 mt-1">Judges confirmed</div>
+                      </div>
+                    </div>
+                    <div className="px-3 py-1 bg-yellow-400/20 border border-yellow-400/30 rounded-full">
+                      <span className="text-yellow-400 text-xs font-medium uppercase tracking-wider">Standby</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
